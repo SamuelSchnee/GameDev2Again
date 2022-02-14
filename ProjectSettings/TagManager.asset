@@ -12,6 +12,27 @@ TagManager:
   - turtleUnlock
   - birdUnlock
   - water
+  - hamsterDoorIn1
+  - hamsterDoorOut2
+  - hamsterDoorIn2
+  - hamsterDoorOut1
+  - gem
+  - H1In
+  - H1DI
+  - H1DO
+  - H1O
+  - H2I
+  - H2O
+  - H3I
+  - H3O
+  - H4I
+  - H4O
+  - Back Door
+  - rope1
+  - rope2
+  - rope3
+  - rope4
+  - rope5
   layers:
   - Default
   - TransparentFX

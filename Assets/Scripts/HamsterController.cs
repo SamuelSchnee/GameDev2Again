@@ -7,7 +7,7 @@ public class HamsterController : MonoBehaviour
     public GameObject hamsterStorage;
     public GameObject player;
     public NewPetSwap petSwap;
-
+    public PlatformController platCnt;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,5 +26,10 @@ public class HamsterController : MonoBehaviour
         {
             transform.position = player.transform.position;
         }
+    }
+
+    private void OnCollisionStay2D(Collision2D other)
+    {
+
     }
 }

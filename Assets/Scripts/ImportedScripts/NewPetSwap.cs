@@ -6,21 +6,25 @@ using UnityEngine.SceneManagement;
 public class NewPetSwap : MonoBehaviour
 {
     static NewPetSwap instance;
+    public TeleporterScript tele;
+    public PlatformController platCnt;
 
     private Rigidbody2D playerRB;
     private Transform playerTFM;
 
-    public GameObject House1;
-    public GameObject House2;
-    public GameObject House3;
-    public GameObject House4;
-    public GameObject town;
-    public GameObject hamsterdoorout1;
-    public GameObject hamsterdoorout2;
-    public GameObject hamsterdoorin1;
-    public GameObject hamsterdoorin2;
     public GameObject waterWall1;
     public GameObject waterWall2;
+
+    public GameObject rope1;
+    public GameObject rope12;
+    public GameObject rope2;
+    public GameObject rope22;
+    public GameObject rope3;
+    public GameObject rope32;
+    public GameObject rope4;
+    public GameObject rope42;
+    public GameObject rope5;
+    public GameObject rope52;
 
     public bool dogActive = true;
     public bool lizardActive = false;
@@ -246,39 +250,83 @@ public class NewPetSwap : MonoBehaviour
             inWater = true;
         }
 
+        if (other.gameObject.tag == "rope1")
+        {
+            Debug.Log("at rope 1");
+        }
+        if (other.gameObject.tag == "rope1" && Input.GetKeyDown(KeyCode.E) && hamsterActive == true)
+        {
+            Debug.Log("cutting Rope1");
+            platCnt.plat1Grav = true;
+            Destroy(rope1);
+            Destroy(rope12);
+        }
+        if (other.gameObject.tag == "rope2" && Input.GetKeyDown(KeyCode.E) && hamsterActive == true)
+        {
+            platCnt.plat2Grav = true;
+            Destroy(rope2);
+            Destroy(rope22);
+        }
+        if (other.gameObject.tag == "rope3" && Input.GetKeyDown(KeyCode.E) && hamsterActive == true)
+        {
+            platCnt.plat3Grav = true;
+            Destroy(rope3);
+            Destroy(rope32);
+        }
+        if (other.gameObject.tag == "rope4" && Input.GetKeyDown(KeyCode.E) && hamsterActive == true)
+        {
+            platCnt.plat4Grav = true;
+            Destroy(rope4);
+            Destroy(rope42);
+        }
+        if (other.gameObject.tag == "rope5" && Input.GetKeyDown(KeyCode.E) && hamsterActive == true)
+        {
+            platCnt.birdGrav = true;
+            Destroy(rope5);
+            Destroy(rope52);
+        }
+
         if (Input.GetKeyDown(KeyCode.E) && dogActive == true)
         {
-            if (other.gameObject.tag == "door")
+            if (other.gameObject.tag == "H1In")
             {
-                /*SceneManager.LoadScene("House 1");
-                transform.position = new Vector2(0, 0);*/
-                transform.position = House1.transform.position;
+                tele.house1I = true;
             }
-
-            if (other.gameObject.tag == "backDoor")
+            if (other.gameObject.tag =="H1DI")
             {
-                /*Debug.Log("backdoor");
-                SceneManager.LoadScene("SampleScene");*/
-                transform.position = town.transform.position;
+                tele.house1DI = true;
             }
-
-            if (other.gameObject.tag == "Door 2")
+            if (other.gameObject.tag == "H1DO")
             {
-                /*SceneManager.LoadScene("House 2");
-                transform.position = new Vector2(0, 0);*/
-                transform.position = House2.transform.position;
+                tele.house1DO = true;
             }
-
-            if (other.gameObject.tag == "Door 3")
+            if (other.gameObject.tag == "H1O")
             {
-                //SceneManager.LoadScene("House 3");
-                transform.position = House3.transform.position;
+                tele.house1O = true;
             }
-
-            if (other.gameObject.tag == "Door 4")
+            if (other.gameObject.tag == "H2I")
             {
-                //SceneManager.LoadScene("House 4");
-                transform.position = House4.transform.position;
+                tele.house2I = true;
+            }
+            if (other.gameObject.tag == "H2O")
+            {
+                tele.house2O = true;
+            }
+            if (other.gameObject.tag == "H3I")
+            {
+                tele.house3I = true;
+            }
+            if (other.gameObject.tag == "H3O")
+            {
+                tele.house3O = true;
+            }
+            if (other.gameObject.tag == "H4I")
+            {
+                tele.house4I = true;
+            }
+            if (other.gameObject.tag == "H4O")
+            {
+                tele.house4O = true;
             }
         }
 
@@ -286,23 +334,19 @@ public class NewPetSwap : MonoBehaviour
         {
             if (other.gameObject.tag == "hamsterDoorIn1")
             {
-                transform.position = hamsterdoorout1.transform.position;
-                canSwitch = false;
+                tele.hamsterI1 = true;
             }
             if (other.gameObject.tag == "hamsterDoorIn2")
             {
-                transform.position = hamsterdoorout2.transform.position;
-                canSwitch = false;
+                tele.hamsterI2 = true;
             }
             if (other.gameObject.tag == "hamsterDoorOut1")
             {
-                transform.position = hamsterdoorin1.transform.position;
-                canSwitch = true;
+                tele.hamsterO1 = true;
             }
             if (other.gameObject.tag == "hamsterDoorOut2")
             {
-                transform.position = hamsterdoorin2.transform.position;
-                canSwitch = true;
+                tele.hamsterO2 = true;
             }
         }
     }
