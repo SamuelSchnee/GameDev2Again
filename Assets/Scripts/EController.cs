@@ -61,7 +61,7 @@ public class EController : MonoBehaviour
             }
         }
 
-        if (other.gameObject.tag == "rope1" || other.gameObject.tag == "rope2" || other.gameObject.tag == "rope3" || other.gameObject.tag == "rope4" || other.gameObject.tag == "rope5")
+        if (other.gameObject.tag == "rope1" || other.gameObject.tag == "rope2" || other.gameObject.tag == "rope3" || other.gameObject.tag == "rope4" || other.gameObject.tag == "rope5" || other.gameObject.tag == "rope6")
         {
             if (petSwap.hamsterActive == true)
             {
@@ -94,7 +94,7 @@ public class EController : MonoBehaviour
             EKey.SetActive(false);
         }
 
-        if (other.gameObject.tag == "rope1" || other.gameObject.tag == "rope2" || other.gameObject.tag == "rope3" || other.gameObject.tag == "rope4" || other.gameObject.tag == "rope5")
+        if (other.gameObject.tag == "rope1" || other.gameObject.tag == "rope2" || other.gameObject.tag == "rope3" || other.gameObject.tag == "rope4" || other.gameObject.tag == "rope5" || other.gameObject.tag == "rope6")
         {
             EKey.SetActive(false);
         }

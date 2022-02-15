@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TeleporterScript : MonoBehaviour
 {
+    public NewPetSwap petSwap;
 
     public bool house1I = false;
     public bool house1O = false;
@@ -19,6 +21,8 @@ public class TeleporterScript : MonoBehaviour
     public bool house3O = false;
     public bool house4I = false;
     public bool house4O = false;
+    public bool houseBreak = false;
+    public bool finalDoor = false;
 
     public GameObject player;
     public GameObject HouseIn1;
@@ -35,6 +39,7 @@ public class TeleporterScript : MonoBehaviour
     public GameObject HouseOut3;
     public GameObject HouseIn4;
     public GameObject HouseOut4;
+    public GameObject brokenHouse;
 
     // Start is called before the first frame update
     void Start()
@@ -85,7 +90,7 @@ public class TeleporterScript : MonoBehaviour
         if (house3O == true)
         {
             player.transform.position = HouseOut3.transform.position;
-            house3I = false;
+            house3O = false;
         }
         if (house4I == true)
         {
@@ -117,6 +122,17 @@ public class TeleporterScript : MonoBehaviour
         {
             player.transform.position = HamsterOut2.transform.position;
             hamsterO2 = false;
+        }
+
+        if (houseBreak == true)
+        {
+            player.transform.position = brokenHouse.transform.position;
+            petSwap.jumpCount = 1;
+            houseBreak = false;
+        }
+        if (finalDoor == true)
+        {
+            SceneManager.LoadScene("WinScene");
         }
     }
 }

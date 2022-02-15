@@ -8,6 +8,7 @@ public class NewPetSwap : MonoBehaviour
     static NewPetSwap instance;
     public TeleporterScript tele;
     public PlatformController platCnt;
+    public CameraController cameraCnt;
 
     private Rigidbody2D playerRB;
     private BoxCollider2D playerBC;
@@ -27,6 +28,8 @@ public class NewPetSwap : MonoBehaviour
     public GameObject rope42;
     public GameObject rope5;
     public GameObject rope52;
+    public GameObject rope6;
+    public GameObject rope62;
 
     public bool dogActive = true;
     public bool lizardActive = false;
@@ -34,6 +37,7 @@ public class NewPetSwap : MonoBehaviour
     public bool turtleActive = false;
     public bool hamsterActive = false;
     private bool canSwitch;
+    public bool waiting;
 
     public bool lizardUnlock = false;
     public bool birdUnlock = false;
@@ -48,6 +52,7 @@ public class NewPetSwap : MonoBehaviour
     public float verticalInput;
     public float speed;
     public float jumpStrength;
+    public float delayCounter;
 
     public int jumpCount;
     public int gemCount;
@@ -78,6 +83,18 @@ public class NewPetSwap : MonoBehaviour
     void Update()
     {
         //DontDestroyOnLoad(this.gameObject);
+
+        if (waiting == true)
+        {
+            delayCounter += 1;
+        }
+
+        if (delayCounter >= 200)
+        {
+            cameraCnt.loadingStageBreak = true;
+            waiting = false;
+            delayCounter = 0;
+        }
 
         if (climbingWall == true)
         {
@@ -225,6 +242,7 @@ public class NewPetSwap : MonoBehaviour
         {
             Debug.Log("bird unlocked");
             birdUnlock = true;
+            waiting = true;
         }
 
         if (other.gameObject.tag == "turtleUnlock" && Input.GetKeyDown(KeyCode.E))
@@ -289,6 +307,13 @@ public class NewPetSwap : MonoBehaviour
             Destroy(rope52);
             EKey.SetActive(false);
         }
+        if (other.gameObject.tag == "rope6" && Input.GetKeyDown(KeyCode.E) && hamsterActive == true)
+        {
+            platCnt.plat5Grav = true;
+            Destroy(rope6);
+            Destroy(rope62);
+            EKey.SetActive(false);
+        }
 
         if (Input.GetKeyDown(KeyCode.E) && dogActive == true)
         {
@@ -331,6 +356,10 @@ public class NewPetSwap : MonoBehaviour
             if (other.gameObject.tag == "H4O")
             {
                 tele.house4O = true;
+            }
+            if (other.gameObject.tag == "finalDoor")
+            {
+                tele.finalDoor = true;
             }
         }
 
@@ -409,7 +438,7 @@ public class NewPetSwap : MonoBehaviour
         speed = 5;
         jumpStrength = 0;
         transform.localScale = new Vector2(2.46f, 0.6f);
-        playerBC.offset = new Vector2(.6f, -.05f);
+        playerBC.offset = new Vector2(-.04f, -.05f);
     }
 
     private void playAsHamster()
@@ -422,7 +451,7 @@ public class NewPetSwap : MonoBehaviour
     private void playAsTurtle()
     {
         speed = 2;
-       // transform.localScale = new Vector2(1, 0.63759f);
+        transform.localScale = new Vector2(1.77f, 0.75f);
 
         if (inWater == true)
         {
@@ -441,7 +470,8 @@ public class NewPetSwap : MonoBehaviour
     private void playAsBird()
     {
         speed = 4;
-        //transform.localScale = new Vector2(0.575f, 1);
+        transform.localScale = new Vector2(1.88f, 1.05f);
+        playerBC.offset = new Vector2(0, 0.04f);
 
         if (jumpCount < 2)
         {
