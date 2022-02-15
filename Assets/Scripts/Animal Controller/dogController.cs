@@ -16,6 +16,17 @@ public class dogController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float horizontalInput = petSwap.horizontalInput;
+
+        if (horizontalInput < 0)
+        {
+            transform.eulerAngles = new Vector2(0, 180);
+        }
+        if (horizontalInput > 0)
+        {
+            transform.eulerAngles = new Vector2(0, 0);
+        }
+
         if (petSwap.dogActive == false)
         {
             transform.position = dogStorage.transform.position;

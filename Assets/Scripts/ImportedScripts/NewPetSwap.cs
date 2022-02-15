@@ -10,10 +10,12 @@ public class NewPetSwap : MonoBehaviour
     public PlatformController platCnt;
 
     private Rigidbody2D playerRB;
+    private BoxCollider2D playerBC;
     private Transform playerTFM;
 
     public GameObject waterWall1;
     public GameObject waterWall2;
+    public GameObject EKey;
 
     public GameObject rope1;
     public GameObject rope12;
@@ -56,6 +58,7 @@ public class NewPetSwap : MonoBehaviour
         jumpStrength = 400;
         playerRB = GetComponent<Rigidbody2D>();
         canSwitch = true;
+        playerBC = GetComponent<BoxCollider2D>();
     }
 
     /*private void Awake()
@@ -203,34 +206,6 @@ public class NewPetSwap : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "lizardUnlock")
-        {
-            Debug.Log("entered");
-            lizardUnlock = true;
-            Destroy(other.gameObject);
-        }
-
-        if (other.gameObject.tag == "birdUnlock")
-        {
-            Debug.Log("bird unlocked");
-            birdUnlock = true;
-            Destroy(other.gameObject);
-        }
-
-        if (other.gameObject.tag == "turtleUnlock")
-        {
-            Debug.Log("turtle unlocked");
-            turtleUnlock = true;
-            Destroy(other.gameObject);
-        }
-
-        if (other.gameObject.tag == "hamsterUnlock")
-        {
-            Debug.Log("hamster unlocked");
-            hamsterUnlock = true;
-            Destroy(other.gameObject);
-        }
-
         if (other.gameObject.tag == "gem")
         {
             gemCount += 1;
@@ -240,6 +215,30 @@ public class NewPetSwap : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
+        if (other.gameObject.tag == "lizardUnlock" && Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("entered");
+            lizardUnlock = true;
+        }
+
+        if (other.gameObject.tag == "birdUnlock" && Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("bird unlocked");
+            birdUnlock = true;
+        }
+
+        if (other.gameObject.tag == "turtleUnlock" && Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("turtle unlocked");
+            turtleUnlock = true;
+        }
+
+        if (other.gameObject.tag == "hamsterUnlock" && Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("hamster unlocked");
+            hamsterUnlock = true;
+        }
+
         if (other.gameObject.tag == "wall" && lizardActive == true)
         {
             climbingWall = true;
@@ -260,30 +259,35 @@ public class NewPetSwap : MonoBehaviour
             platCnt.plat1Grav = true;
             Destroy(rope1);
             Destroy(rope12);
+            EKey.SetActive(false);
         }
         if (other.gameObject.tag == "rope2" && Input.GetKeyDown(KeyCode.E) && hamsterActive == true)
         {
             platCnt.plat2Grav = true;
             Destroy(rope2);
             Destroy(rope22);
+            EKey.SetActive(false);
         }
         if (other.gameObject.tag == "rope3" && Input.GetKeyDown(KeyCode.E) && hamsterActive == true)
         {
             platCnt.plat3Grav = true;
             Destroy(rope3);
             Destroy(rope32);
+            EKey.SetActive(false);
         }
         if (other.gameObject.tag == "rope4" && Input.GetKeyDown(KeyCode.E) && hamsterActive == true)
         {
             platCnt.plat4Grav = true;
             Destroy(rope4);
             Destroy(rope42);
+            EKey.SetActive(false);
         }
         if (other.gameObject.tag == "rope5" && Input.GetKeyDown(KeyCode.E) && hamsterActive == true)
         {
             platCnt.birdGrav = true;
             Destroy(rope5);
             Destroy(rope52);
+            EKey.SetActive(false);
         }
 
         if (Input.GetKeyDown(KeyCode.E) && dogActive == true)
@@ -389,7 +393,8 @@ public class NewPetSwap : MonoBehaviour
 
     private void playAsDog()
     {
-        transform.localScale = new Vector2(2.318059f, 1.39098f);
+        transform.localScale = new Vector2(4.62f, 1.83f);
+        playerBC.offset = new Vector2(0, 0.12f);
         speed = 20;
         jumpStrength = 400;
 
@@ -403,19 +408,21 @@ public class NewPetSwap : MonoBehaviour
     {
         speed = 5;
         jumpStrength = 0;
-        transform.localScale = new Vector2(1.3f, 0.73757f);
+        transform.localScale = new Vector2(2.46f, 0.6f);
+        playerBC.offset = new Vector2(.6f, -.05f);
     }
 
     private void playAsHamster()
     {
         speed = 10;
-        transform.localScale = new Vector2(0.56181f, 0.4424591f);
+        transform.localScale = new Vector2(1.04f, 0.4424591f);
+        playerBC.offset = new Vector2(0, -.05f);
     }
 
     private void playAsTurtle()
     {
         speed = 2;
-        transform.localScale = new Vector2(1, 0.63759f);
+       // transform.localScale = new Vector2(1, 0.63759f);
 
         if (inWater == true)
         {
@@ -434,7 +441,7 @@ public class NewPetSwap : MonoBehaviour
     private void playAsBird()
     {
         speed = 4;
-        transform.localScale = new Vector2(0.575f, 1);
+        //transform.localScale = new Vector2(0.575f, 1);
 
         if (jumpCount < 2)
         {
