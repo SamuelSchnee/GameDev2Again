@@ -35,7 +35,7 @@ public class CameraController : MonoBehaviour
             tele.houseBreak = true;
         }
 
-        if (loadTime >= 1000)
+        if (loadTime >= 500)
         {
             loadingStageBreak = false;
             

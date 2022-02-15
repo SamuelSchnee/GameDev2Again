@@ -9,6 +9,7 @@ public class NewPetSwap : MonoBehaviour
     public TeleporterScript tele;
     public PlatformController platCnt;
     public CameraController cameraCnt;
+    public HUDController HUD;
 
     private Rigidbody2D playerRB;
     private BoxCollider2D playerBC;
@@ -17,6 +18,11 @@ public class NewPetSwap : MonoBehaviour
     public GameObject waterWall1;
     public GameObject waterWall2;
     public GameObject EKey;
+
+    public GameObject fakeTurtle;
+    public GameObject fakeHamster;
+    public GameObject fakeLizard;
+    public GameObject fakeBird;
 
     public GameObject rope1;
     public GameObject rope12;
@@ -236,25 +242,33 @@ public class NewPetSwap : MonoBehaviour
         {
             Debug.Log("entered");
             lizardUnlock = true;
+            Destroy(fakeLizard);
+            HUD.unlockingLizard = true;
         }
 
         if (other.gameObject.tag == "birdUnlock" && Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("bird unlocked");
             birdUnlock = true;
+            Destroy(fakeBird);
             waiting = true;
+            HUD.unlockingBird = true;
         }
 
         if (other.gameObject.tag == "turtleUnlock" && Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("turtle unlocked");
             turtleUnlock = true;
+            Destroy(fakeTurtle);
+            HUD.unlockingTurtle = true;
         }
 
         if (other.gameObject.tag == "hamsterUnlock" && Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("hamster unlocked");
             hamsterUnlock = true;
+            Destroy(fakeHamster);
+            HUD.unlockingHamster = true;
         }
 
         if (other.gameObject.tag == "wall" && lizardActive == true)
@@ -273,46 +287,46 @@ public class NewPetSwap : MonoBehaviour
         }
         if (other.gameObject.tag == "rope1" && Input.GetKeyDown(KeyCode.E) && hamsterActive == true)
         {
+            EKey.SetActive(false);
             Debug.Log("cutting Rope1");
             platCnt.plat1Grav = true;
             Destroy(rope1);
             Destroy(rope12);
-            EKey.SetActive(false);
         }
         if (other.gameObject.tag == "rope2" && Input.GetKeyDown(KeyCode.E) && hamsterActive == true)
         {
+            EKey.SetActive(false);
             platCnt.plat2Grav = true;
             Destroy(rope2);
             Destroy(rope22);
-            EKey.SetActive(false);
         }
         if (other.gameObject.tag == "rope3" && Input.GetKeyDown(KeyCode.E) && hamsterActive == true)
         {
+            EKey.SetActive(false);
             platCnt.plat3Grav = true;
             Destroy(rope3);
             Destroy(rope32);
-            EKey.SetActive(false);
         }
         if (other.gameObject.tag == "rope4" && Input.GetKeyDown(KeyCode.E) && hamsterActive == true)
         {
+            EKey.SetActive(false);
             platCnt.plat4Grav = true;
             Destroy(rope4);
             Destroy(rope42);
-            EKey.SetActive(false);
         }
         if (other.gameObject.tag == "rope5" && Input.GetKeyDown(KeyCode.E) && hamsterActive == true)
         {
+            EKey.SetActive(false);
             platCnt.birdGrav = true;
             Destroy(rope5);
             Destroy(rope52);
-            EKey.SetActive(false);
         }
         if (other.gameObject.tag == "rope6" && Input.GetKeyDown(KeyCode.E) && hamsterActive == true)
         {
+            EKey.SetActive(false);
             platCnt.plat5Grav = true;
             Destroy(rope6);
             Destroy(rope62);
-            EKey.SetActive(false);
         }
 
         if (Input.GetKeyDown(KeyCode.E) && dogActive == true)
@@ -361,6 +375,14 @@ public class NewPetSwap : MonoBehaviour
             {
                 tele.finalDoor = true;
             }
+            if (other.gameObject.tag == "StartDoorIn")
+            {
+                tele.startDoorIn = true;
+            }
+            if (other.gameObject.tag == "startDoorOut")
+            {
+                tele.startDoorOut = true;
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.E) && hamsterActive == true)
@@ -382,6 +404,11 @@ public class NewPetSwap : MonoBehaviour
                 tele.hamsterO2 = true;
             }
         }
+        if (other.gameObject.tag == "waterWall")
+        {
+            Debug.Log("hitting water wall");
+            HUD.waterWall = true;
+        }
     }
 
     IEnumerator cameraWait()
@@ -394,6 +421,7 @@ public class NewPetSwap : MonoBehaviour
         if (collision.gameObject.tag == "wall")
         {
             climbingWall = false;
+            jumpCount = 1;
         }
 
         if (collision.gameObject.tag == "water")

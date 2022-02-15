@@ -6,6 +6,7 @@ public class EController : MonoBehaviour
 {
     public GameObject EKey;
     public NewPetSwap petSwap;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -33,11 +34,11 @@ public class EController : MonoBehaviour
                 EKey.SetActive(false);
             }
         }
-        if (other.gameObject.tag == "hamsterUnlock" || other.gameObject.tag == "lizardUnlock" || other.gameObject.tag == "turtleUnlock" || other.gameObject.tag == "birdUnlock")
+        if (other.gameObject.tag == "hamsterUnlock" && petSwap.hamsterUnlock == false || other.gameObject.tag == "lizardUnlock" && petSwap.lizardUnlock == false|| other.gameObject.tag == "turtleUnlock" && petSwap.turtleUnlock == false || other.gameObject.tag == "birdUnlock" && petSwap.birdUnlock == false)
         {
             EKey.SetActive(true);
         }
-        if (other.gameObject.tag == "H2I" || other.gameObject.tag == "H2O" || other.gameObject.tag == "H3I" || other.gameObject.tag == "H3O" || gameObject.tag == "H4I" || gameObject.tag == "H4O")
+        if (other.gameObject.tag == "H2I" || other.gameObject.tag == "H2O" || other.gameObject.tag == "H3I" || other.gameObject.tag == "H3O" || gameObject.tag == "H4I" || gameObject.tag == "H4O" || other.gameObject.tag == "startDoorOut" || other.gameObject.tag == "StartDoorIn")
         {
             if (petSwap.dogActive == true)
             {
@@ -84,7 +85,7 @@ public class EController : MonoBehaviour
         {
             EKey.SetActive(false);
         }
-        if (other.gameObject.tag == "H2I" || other.gameObject.tag == "H2O" || other.gameObject.tag == "H3I" || other.gameObject.tag == "H3O" || gameObject.tag == "H4I" || gameObject.tag == "H4O")
+        if (other.gameObject.tag == "H2I" || other.gameObject.tag == "H2O" || other.gameObject.tag == "H3I" || other.gameObject.tag == "H3O" || gameObject.tag == "H4I" || gameObject.tag == "H4O" || other.gameObject.tag == "startDoorOut" || other.gameObject.tag == "StartDoorIn")
         {
             EKey.SetActive(false);
         }

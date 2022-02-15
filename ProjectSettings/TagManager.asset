@@ -35,6 +35,9 @@ TagManager:
   - rope5
   - rope6
   - finalDoor
+  - startDoorOut
+  - StartDoorIn
+  - waterWall
   layers:
   - Default
   - TransparentFX

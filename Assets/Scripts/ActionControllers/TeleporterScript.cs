@@ -23,6 +23,8 @@ public class TeleporterScript : MonoBehaviour
     public bool house4O = false;
     public bool houseBreak = false;
     public bool finalDoor = false;
+    public bool startDoorIn = false;
+    public bool startDoorOut = false;
 
     public GameObject player;
     public GameObject HouseIn1;
@@ -40,6 +42,8 @@ public class TeleporterScript : MonoBehaviour
     public GameObject HouseIn4;
     public GameObject HouseOut4;
     public GameObject brokenHouse;
+    public GameObject SDI;
+    public GameObject SDO;
 
     // Start is called before the first frame update
     void Start()
@@ -133,6 +137,16 @@ public class TeleporterScript : MonoBehaviour
         if (finalDoor == true)
         {
             SceneManager.LoadScene("WinScene");
+        }
+        if (startDoorOut == true)
+        {
+            player.transform.position = SDO.transform.position;
+            startDoorOut = false;
+        }
+        if (startDoorIn == true)
+        {
+            player.transform.position = SDI.transform.position;
+            startDoorIn = false;
         }
     }
 }
