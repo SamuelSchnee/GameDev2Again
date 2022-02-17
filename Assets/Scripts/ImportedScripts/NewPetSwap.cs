@@ -118,7 +118,7 @@ public class NewPetSwap : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && jumpCount > 0 && lizardActive == false && turtleActive == false)
         {
-            playerRB.AddForce(Vector2.up * jumpStrength);
+            playerRB.AddForce(Vector2.up * jumpStrength * Time.deltaTime, ForceMode2D.Impulse);
             jumpCount -= 1;
 
         }
@@ -453,7 +453,7 @@ public class NewPetSwap : MonoBehaviour
         transform.localScale = new Vector2(4.62f, 1.83f);
         playerBC.offset = new Vector2(0, 0.12f);
         speed = 20;
-        jumpStrength = 400;
+        jumpStrength = 1000;
 
         if (jumpCount < 1)
         {
