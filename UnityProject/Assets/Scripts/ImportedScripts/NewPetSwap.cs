@@ -44,6 +44,7 @@ public class NewPetSwap : MonoBehaviour
     public bool hamsterActive = false;
     private bool canSwitch;
     public bool waiting;
+    public bool cutScene = false;
 
     public bool lizardUnlock = false;
     public bool birdUnlock = false;
@@ -116,7 +117,7 @@ public class NewPetSwap : MonoBehaviour
             playerRB.gravityScale = 2;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && jumpCount > 0 && lizardActive == false && turtleActive == false)
+        if (Input.GetKeyDown(KeyCode.Space) && jumpCount > 0 && lizardActive == false && turtleActive == false && cutScene == false)
         {
             playerRB.AddForce(Vector2.up * jumpStrength * Time.deltaTime, ForceMode2D.Impulse);
             jumpCount -= 1;
@@ -147,9 +148,12 @@ public class NewPetSwap : MonoBehaviour
         {
             playAsBird();
         }
+        if (cutScene == false)
+        {
+            horizontalInput = Input.GetAxis("Horizontal");
+            transform.Translate(Vector2.right * horizontalInput * Time.deltaTime * speed);
+        }
 
-        horizontalInput = Input.GetAxis("Horizontal");
-        transform.Translate(Vector2.right * horizontalInput * Time.deltaTime * speed);
 
         if (Input.GetKeyDown(KeyCode.Alpha1) && dogActive == false && canSwitch == true)
         {

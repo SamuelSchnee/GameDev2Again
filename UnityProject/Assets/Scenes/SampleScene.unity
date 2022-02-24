@@ -19543,6 +19543,7 @@ MonoBehaviour:
   turtleActive: 0
   hamsterActive: 0
   waiting: 0
+  cutScene: 0
   lizardUnlock: 0
   birdUnlock: 0
   turtleUnlock: 0
