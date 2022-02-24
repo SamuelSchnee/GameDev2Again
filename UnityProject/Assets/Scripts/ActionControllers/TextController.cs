@@ -23,6 +23,11 @@ public class TextController : MonoBehaviour
     public int TurtTextCnt = 0;
     public int BirdTextCnt = 0;
 
+    public GameObject fakeHam;
+    public GameObject fakeLiz;
+    public GameObject fakeTur;
+    public GameObject fakeBird;
+
     public GameObject HText1;
     public GameObject HText2;
     public GameObject HText3;
@@ -53,13 +58,24 @@ public class TextController : MonoBehaviour
         TurtleUnlocked = petSwap.turtleUnlock;
         BirdUnlocked = petSwap.birdUnlock;
 
-        if (hamsterUnlocked = true)
-        {
+        if (hamsterUnlocked == true && hamTextCnt == 0){
             hamTextCnt = 1;
             unlock1 = true;
-            hamsterUnlocked = false;
-        }
 
+        }
+        if (lizardUnlocked == true && lizTextCnt == 0){
+            lizTextCnt = 1;
+            unlock2 = true;
+        }
+        if (TurtleUnlocked == true && TurtTextCnt == 0){
+            unlock3 = true;
+            TurtTextCnt = 1;
+        }
+        if (BirdUnlocked == true && BirdTextCnt == 0){
+            unlock4 = true;
+            BirdTextCnt = 1;
+        }
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         if( unlock1 == true)
         {
             petSwap.cutScene = true;
@@ -80,8 +96,112 @@ public class TextController : MonoBehaviour
             if (hamTextCnt == 3){
                 HText2.SetActive(false);
                 HText3.SetActive(true);
+                if (Input.GetKeyDown(KeyCode.Space)){
+                    HText3.SetActive(false);
+                    Destroy(fakeHam);
+                    petSwap.cutScene = false;
+                    hamTextCnt = -1;
+                    unlock1 = false;
+                }
             }
         }
-    
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        if (unlock2 == true)
+        {
+            petSwap.cutScene = true;
+
+            if (lizTextCnt == 1){
+                LText1.SetActive(true);
+                if(Input.GetKeyDown(KeyCode.Space)){
+                lizTextCnt += 1;
+                }
+            }
+            if (lizTextCnt == 2){
+                LText1.SetActive(false);
+                LText2.SetActive(true);
+                if (Input.GetKeyDown(KeyCode.Space)){
+                    lizTextCnt += 1;
+                }
+            }
+            if (lizTextCnt == 3){
+                LText2.SetActive(false);
+                LText3.SetActive(true);
+                if (Input.GetKeyDown(KeyCode.Space)){
+                    LText3.SetActive(false);
+                    Destroy(fakeLiz);
+                    petSwap.cutScene = false;
+                    lizTextCnt = -1;
+                    unlock2 = false;
+                }
+            }
+            
+        }
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        if (unlock3 == true)
+        {
+            petSwap.cutScene = true;
+
+            if (TurtTextCnt == 1){
+                TTExt1.SetActive(true);
+                if(Input.GetKeyDown(KeyCode.Space)){
+                    TurtTextCnt += 1;
+                }
+            }
+            if (TurtTextCnt == 2){
+                TTExt1.SetActive(false);
+                TText2.SetActive(true);
+                if(Input.GetKeyDown(KeyCode.Space)){
+                    TurtTextCnt += 1;
+                }
+            }
+            if (TurtTextCnt == 3){
+                TText2.SetActive(false);
+                TText3.SetActive(true);
+                if(Input.GetKeyDown(KeyCode.Space)){
+                    TText3.SetActive(false);
+                    Destroy(fakeTur);
+                    petSwap.cutScene = false;
+                    TurtTextCnt = -1;
+                    unlock3 = false;
+                }
+            }
+        }
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        if (unlock4 == true)
+        {
+            petSwap.cutScene = true;
+
+            if (BirdTextCnt == 1){
+                BText1.SetActive(true);
+                if(Input.GetKeyDown(KeyCode.Space)){
+                    BirdTextCnt += 1;
+                }
+            }
+            if (BirdTextCnt == 2){
+                BText1.SetActive(false);
+                BText2.SetActive(true);
+                if(Input.GetKeyDown(KeyCode.Space)){
+                    BirdTextCnt += 1;
+                }
+            }
+            if (BirdTextCnt == 3){
+                BText2.SetActive(false);
+                BText3.SetActive(true);
+                if(Input.GetKeyDown(KeyCode.Space)){
+                    BirdTextCnt += 1;
+                }
+            }
+            if (BirdTextCnt == 4){
+                BText3.SetActive(false);
+                Btext4.SetActive(true);
+                if(Input.GetKeyDown(KeyCode.Space)){
+                    Btext4.SetActive(false);
+                    Destroy(fakeBird);
+                    petSwap.cutScene = false;
+                    BirdTextCnt = -1;
+                    unlock4 = false;
+                }
+            }
+        }
     }
 }
