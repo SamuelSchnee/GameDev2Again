@@ -4568,6 +4568,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 29708715}
     m_Modifications:
+    - target: {fileID: 3417924763833731808, guid: f9ef4b173c6949a45947bffe4cb3e027, type: 3}
+      propertyPath: m_Size.x
+      value: 1.2460392
+      objectReference: {fileID: 0}
+    - target: {fileID: 3417924763833731808, guid: f9ef4b173c6949a45947bffe4cb3e027, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.10605633
+      objectReference: {fileID: 0}
     - target: {fileID: 3417924763833731811, guid: f9ef4b173c6949a45947bffe4cb3e027, type: 3}
       propertyPath: m_Name
       value: Ground (10)
@@ -5597,6 +5605,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 29708715}
     m_Modifications:
+    - target: {fileID: 3417924763833731808, guid: f9ef4b173c6949a45947bffe4cb3e027, type: 3}
+      propertyPath: m_Size.x
+      value: 1.2290778
+      objectReference: {fileID: 0}
+    - target: {fileID: 3417924763833731808, guid: f9ef4b173c6949a45947bffe4cb3e027, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.106043935
+      objectReference: {fileID: 0}
     - target: {fileID: 3417924763833731811, guid: f9ef4b173c6949a45947bffe4cb3e027, type: 3}
       propertyPath: m_Name
       value: Ground (8)
@@ -8920,7 +8936,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.21872938}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -8931,7 +8947,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 1.4374588}
   m_EdgeRadius: 0
 --- !u!212 &666267011
 SpriteRenderer:
@@ -10951,7 +10967,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.24981298}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -10962,7 +10978,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 1.4996258}
   m_EdgeRadius: 0
 --- !u!212 &849326886
 SpriteRenderer:
@@ -11878,7 +11894,7 @@ GameObject:
   - component: {fileID: 920468151}
   - component: {fileID: 920468150}
   m_Layer: 5
-  m_Name: Image
+  m_Name: DialogueBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11900,8 +11916,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.1, y: -145.3}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 4.1935, y: -152.5601}
+  m_SizeDelta: {x: 104.4839, y: 112.4905}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &920468150
 MonoBehaviour:
@@ -12541,6 +12557,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 29708715}
     m_Modifications:
+    - target: {fileID: 3417924763833731808, guid: f9ef4b173c6949a45947bffe4cb3e027, type: 3}
+      propertyPath: m_Size.x
+      value: 1.1075842
+      objectReference: {fileID: 0}
+    - target: {fileID: 3417924763833731808, guid: f9ef4b173c6949a45947bffe4cb3e027, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.030219883
+      objectReference: {fileID: 0}
     - target: {fileID: 3417924763833731811, guid: f9ef4b173c6949a45947bffe4cb3e027, type: 3}
       propertyPath: m_Name
       value: Ground (19)
@@ -13458,7 +13482,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.39041823}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -13469,7 +13493,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 1.7808365}
   m_EdgeRadius: 0
 --- !u!212 &1036307490
 SpriteRenderer:
@@ -14467,76 +14491,6 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3417924763833731814, guid: f9ef4b173c6949a45947bffe4cb3e027, type: 3}
   m_PrefabInstance: {fileID: 1013728829}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1093959045
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 5944311071918738411}
-    m_Modifications:
-    - target: {fileID: 1293603593108180, guid: 92d60a2e17d9a4bb8bd3801b14fc2926, type: 3}
-      propertyPath: m_Name
-      value: Sample Textmesh
-      objectReference: {fileID: 0}
-    - target: {fileID: 1293603593108180, guid: 92d60a2e17d9a4bb8bd3801b14fc2926, type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4915952705314410, guid: 92d60a2e17d9a4bb8bd3801b14fc2926, type: 3}
-      propertyPath: m_RootOrder
-      value: 31
-      objectReference: {fileID: 0}
-    - target: {fileID: 4915952705314410, guid: 92d60a2e17d9a4bb8bd3801b14fc2926, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -261
-      objectReference: {fileID: 0}
-    - target: {fileID: 4915952705314410, guid: 92d60a2e17d9a4bb8bd3801b14fc2926, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.24494262
-      objectReference: {fileID: 0}
-    - target: {fileID: 4915952705314410, guid: 92d60a2e17d9a4bb8bd3801b14fc2926, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4915952705314410, guid: 92d60a2e17d9a4bb8bd3801b14fc2926, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4915952705314410, guid: 92d60a2e17d9a4bb8bd3801b14fc2926, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4915952705314410, guid: 92d60a2e17d9a4bb8bd3801b14fc2926, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4915952705314410, guid: 92d60a2e17d9a4bb8bd3801b14fc2926, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4915952705314410, guid: 92d60a2e17d9a4bb8bd3801b14fc2926, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4915952705314410, guid: 92d60a2e17d9a4bb8bd3801b14fc2926, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4915952705314410, guid: 92d60a2e17d9a4bb8bd3801b14fc2926, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 102362823683043728, guid: 92d60a2e17d9a4bb8bd3801b14fc2926, type: 3}
-      propertyPath: m_FontSize
-      value: 50
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 92d60a2e17d9a4bb8bd3801b14fc2926, type: 3}
---- !u!4 &1093959046 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4915952705314410, guid: 92d60a2e17d9a4bb8bd3801b14fc2926, type: 3}
-  m_PrefabInstance: {fileID: 1093959045}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1098805648
 GameObject:
@@ -20403,6 +20357,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 29708715}
     m_Modifications:
+    - target: {fileID: 3417924763833731808, guid: f9ef4b173c6949a45947bffe4cb3e027, type: 3}
+      propertyPath: m_Size.x
+      value: 1.1008418
+      objectReference: {fileID: 0}
+    - target: {fileID: 3417924763833731808, guid: f9ef4b173c6949a45947bffe4cb3e027, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.03359115
+      objectReference: {fileID: 0}
     - target: {fileID: 3417924763833731811, guid: f9ef4b173c6949a45947bffe4cb3e027, type: 3}
       propertyPath: m_Name
       value: Ground (18)
@@ -26870,7 +26832,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &3751363866349097389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26949,7 +26911,6 @@ RectTransform:
   - {fileID: 6349693108859621547}
   - {fileID: 6349693109908497631}
   - {fileID: 6349693108779169766}
-  - {fileID: 1093959046}
   m_Father: {fileID: 0}
   m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -26975,7 +26936,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -716, y: 251}
+  m_AnchoredPosition: {x: -420, y: 250}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6349693108688395941
@@ -27207,7 +27168,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -716, y: 251}
+  m_AnchoredPosition: {x: -420, y: 250}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6349693108779169767
@@ -27342,7 +27303,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -716, y: 251}
+  m_AnchoredPosition: {x: -420, y: 250}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6349693108797450343
@@ -27765,7 +27726,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -716, y: 251}
+  m_AnchoredPosition: {x: -420, y: 250}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6349693108892731668
@@ -27919,7 +27880,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -716, y: 251}
+  m_AnchoredPosition: {x: -420, y: 250}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6349693108908663117
@@ -28054,7 +28015,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -716, y: 251}
+  m_AnchoredPosition: {x: -420, y: 250}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6349693108949995153
@@ -28304,7 +28265,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -716, y: 251}
+  m_AnchoredPosition: {x: -420, y: 250}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6349693109073448772
@@ -28441,7 +28402,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &6349693109145909380
 GameObject:
   m_ObjectHideFlags: 0
@@ -28574,7 +28535,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -716, y: 251}
+  m_AnchoredPosition: {x: -420, y: 250}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6349693109230075776
@@ -28691,7 +28652,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -716, y: 251}
+  m_AnchoredPosition: {x: -420, y: 250}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6349693109230075779
@@ -29400,7 +29361,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -716, y: 251}
+  m_AnchoredPosition: {x: -420, y: 250}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6349693109563660169
@@ -29564,9 +29525,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I'm sorry for waking you up, Hassan, but we need your help. The humans
-    have dissappeared and our friends are still trapped in their houses, we have
-    to save them!
+  m_text: "I'm sorry for waking you up, Hassan, but we need your help. \nThe humans
+    have dissappeared and our friends are still trapped \nin their houses, we have
+    to save them!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -29719,8 +29680,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: It is quite the pickle, but since the humans have dissappeared it means
-    that our friends are still locked in their houses.  We have to help them!
+  m_text: "It is quite the pickle, but since the humans have dissappeared \nit means
+    that our friends are still locked in their houses.  \nWe have to help them!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -30055,7 +30016,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -716, y: 251}
+  m_AnchoredPosition: {x: -420, y: 250}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6349693109760795460
@@ -30192,7 +30153,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -716, y: 251}
+  m_AnchoredPosition: {x: -420, y: 250}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6349693109780267236
@@ -30327,7 +30288,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -716, y: 251}
+  m_AnchoredPosition: {x: -420, y: 250}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6349693109788703104
@@ -30350,8 +30311,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Who dares disturb my rehearsal?! By my feathers, Danny, I did not expect
-    such a rude interruption from you. Maybe from Tony, that loudmouth, but not you!
+  m_text: "Who dares disturb my rehearsal?! By my feathers, Danny, \nI did not expect
+    such a rude interruption from you. \nMaybe from Tony, that loudmouth, but not
+    you!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -30530,8 +30492,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: But of course! We must make haste, I still have so much to rehearse! La
-    la laaa!
+  m_text: "But of course! We must make haste, I still have so much to rehearse! \nLa
+    la laaa!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -30781,10 +30743,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Hey Danny, it''s good to see you. Have you seen my owners by chance?
-
-    They
-    seem to have dissappeared and I''ve been stuck here a while.'
+  m_text: "Hey Danny, it's good to see you. \nHave you seen my owners by chance?\nThey
+    seem to have dissappeared and I've been stuck here a while."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -30980,7 +30940,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -716, y: 251}
+  m_AnchoredPosition: {x: -420, y: 250}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6349693109894804418
@@ -31123,7 +31083,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -716, y: 251}
+  m_AnchoredPosition: {x: -420, y: 250}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6349693109904946679
@@ -31276,7 +31236,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -716, y: 251}
+  m_AnchoredPosition: {x: -420, y: 250}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6349693109938165436
@@ -31593,8 +31553,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: They have dissappeared, but it's not just your owners, Lizzie. It seems
-    that all of the humans have dissappeared!
+  m_text: "They have dissappeared, but it's not just your owners, Lizzie. \nIt seems
+    that all of the humans have dissappeared!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -31747,8 +31707,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I'm sure you're very busy, Tony, but all of the humans have dissappeared
-    and left their houses locked. We have to save our friends still trapped inside!
+  m_text: "I'm sure you're very busy, Tony, but all of the humans have \ndissappeared
+    and left their houses locked. \nWe have to save our friends still trapped inside!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -31834,7 +31794,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -716, y: 251}
+  m_AnchoredPosition: {x: -420, y: 250}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6349693110052974929
@@ -32084,7 +32044,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -716, y: 251}
+  m_AnchoredPosition: {x: -420, y: 250}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6349693110150845620
@@ -32219,7 +32179,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -716, y: 251}
+  m_AnchoredPosition: {x: -420, y: 250}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6349693110151453488
@@ -32336,7 +32296,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -716, y: 251}
+  m_AnchoredPosition: {x: -420, y: 250}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6349693110151453491
@@ -32463,7 +32423,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -716, y: 251}
+  m_AnchoredPosition: {x: -420, y: 250}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6349693110311792026
@@ -33228,8 +33188,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: All the humans are gone, eh? By my shell, that's just bad business practice!
-    I'm gonna have a word with them when they get back, I tell ya!
+  m_text: "All the humans are gone, eh? \nBy my shell, that's just bad business practice!
+    \nI'm gonna have a word with them when they get back, I tell ya!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -33363,8 +33323,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ay, Danny, what's the big idea? 'Course I'm ok, can't yous see I'm busy
-    here?
+  m_text: 'Ay, Danny, what''s the big idea?
+
+    ''Course I''m ok, can''t yous see
+    I''m busy here?'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -33969,7 +33931,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -716, y: 251}
+  m_AnchoredPosition: {x: -420, y: 250}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &6349693110607048876
@@ -34220,7 +34182,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -716, y: 251}
+  m_AnchoredPosition: {x: -420, y: 250}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6349693110645946223
@@ -34258,7 +34220,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -716, y: 251}
+  m_AnchoredPosition: {x: -420, y: 250}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6349693110690333429
@@ -34538,9 +34500,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Oh, hush darling, I appreciate yout sentiment. However, this new piece
-    is for the human ear. Your ears are much to sensitive dear and I couldn't bare
-    to hurt them, you see.
+  m_text: 'Oh, hush darling, I appreciate yout sentiment. However, this new
+
+    piece
+    is for the human ear. Your ears are much to sensitive dear
+
+    and I couldn''t
+    bare to hurt them, you see.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -34752,7 +34718,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -716, y: 251}
+  m_AnchoredPosition: {x: -420, y: 250}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6349693110819421138
