@@ -5365,7 +5365,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &422042613
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19715,7 +19715,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1575486454}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 109, y: 346, z: -53.115524}
+  m_LocalPosition: {x: 162.7, y: 417.7, z: -53.115524}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 422042614}
@@ -26352,6 +26352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   petSwap: {fileID: 1575486455}
   Hud: {fileID: 292389834}
+  wait: 0
   unlock1: 0
   unlock2: 0
   unlock3: 0
@@ -26367,19 +26368,32 @@ MonoBehaviour:
   fakeLiz: {fileID: 700446802}
   fakeTur: {fileID: 308640391}
   fakeBird: {fileID: 86757723}
-  HText1: {fileID: 0}
-  HText2: {fileID: 0}
-  HText3: {fileID: 0}
-  LText1: {fileID: 0}
-  LText2: {fileID: 0}
-  LText3: {fileID: 0}
-  TTExt1: {fileID: 0}
-  TText2: {fileID: 0}
-  TText3: {fileID: 0}
-  BText1: {fileID: 0}
-  BText2: {fileID: 0}
-  BText3: {fileID: 0}
-  Btext4: {fileID: 0}
+  HText1: {fileID: 6349693108998745584}
+  HText2: {fileID: 2569855055124904316}
+  HText3: {fileID: 6349693109563660169}
+  HText4: {fileID: 6349693108807725595}
+  HText5: {fileID: 6349693109746111264}
+  HText6: {fileID: 6349693109073448775}
+  LText1: {fileID: 6349693110819421138}
+  LText2: {fileID: 6349693110349996403}
+  LText3: {fileID: 6349693109230075779}
+  LText4: {fileID: 6349693108831222640}
+  LText5: {fileID: 6349693110311792026}
+  LText6: {fileID: 6349693109904946679}
+  TTExt1: {fileID: 6349693110645946223}
+  TText2: {fileID: 6349693108688395941}
+  TText3: {fileID: 6349693109780267236}
+  TText4: {fileID: 6349693108797450343}
+  TText5: {fileID: 6349693108949995153}
+  TText6: {fileID: 6349693108908663117}
+  BText1: {fileID: 6349693110150845620}
+  BText2: {fileID: 6349693109760795460}
+  BText3: {fileID: 6349693110052974929}
+  BText4: {fileID: 6349693110130293136}
+  BText5: {fileID: 6349693110151453491}
+  BText6: {fileID: 6349693110594028636}
+  BText7: {fileID: 6349693110690333429}
+  BText8: {fileID: 6349693109894804418}
   house2Help: {fileID: 0}
   house3Help: {fileID: 0}
   house4Help: {fileID: 0}
@@ -26828,7 +26842,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &3751363866349097389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27179,7 +27193,7 @@ GameObject:
   - component: {fileID: 6349693108779169764}
   - component: {fileID: 6349693108779169765}
   m_Layer: 5
-  m_Name: Danny5.4
+  m_Name: DannyFLY
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27602,7 +27616,7 @@ GameObject:
   - component: {fileID: 6349693108859621545}
   - component: {fileID: 6349693108859621546}
   m_Layer: 5
-  m_Name: Danny5.2
+  m_Name: DannySWIM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27771,7 +27785,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hmmm... I won't be able to swim across, but I'm sure Tony can...
+  m_text: Hmmm... That's a lot of WATER. I'll have to find someone that can SWIM.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -28411,7 +28425,7 @@ GameObject:
   - component: {fileID: 6349693109145909385}
   - component: {fileID: 6349693109145909386}
   m_Layer: 5
-  m_Name: Danny5.1
+  m_Name: DannyCLIMB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29002,7 +29016,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hmmm... I won't be able to jump across, but I'm sure Berry can...
+  m_text: Hmmm... I won't be able to JUMP across. I'll have to find someone who can
+    FLY.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -31112,7 +31127,7 @@ GameObject:
   - component: {fileID: 6349693109908497629}
   - component: {fileID: 6349693109908497630}
   m_Layer: 5
-  m_Name: Danny5.3
+  m_Name: DannySMALL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32468,7 +32483,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hmmm... I won't be able to climb this, but I'm sure Lizzie can...
+  m_text: Hmmm... This house has BIG furniture. I'll have to find someone who can
+    CLIMB.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -33456,7 +33472,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hmmm... I won't be able to fit in here, but I'm sure Hassan can...
+  m_text: Hmmm... This house has a lot of NOOKS and CRANNIES. I'll have to find someone
+    SMALL enough to fit.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

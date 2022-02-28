@@ -7,6 +7,7 @@ public class TextController : MonoBehaviour
 {
     public NewPetSwap petSwap;
     public HUDController Hud;
+    public bool wait;
 
     private bool hamsterUnlocked;
     private bool lizardUnlocked;
@@ -36,19 +37,32 @@ public class TextController : MonoBehaviour
     public GameObject HText1;
     public GameObject HText2;
     public GameObject HText3;
+    public GameObject HText4;
+    public GameObject HText5;
+    public GameObject HText6;
 
     public GameObject LText1;
     public GameObject LText2;
     public GameObject LText3;
+    public GameObject LText4;
+    public GameObject LText5;
+    public GameObject LText6;
 
     public GameObject TTExt1;
     public GameObject TText2;
     public GameObject TText3;
+    public GameObject TText4;
+    public GameObject TText5;
+    public GameObject TText6;
 
     public GameObject BText1;
     public GameObject BText2;
     public GameObject BText3;
-    public GameObject Btext4;
+    public GameObject BText4;
+    public GameObject BText5;
+    public GameObject BText6;
+    public GameObject BText7;
+    public GameObject BText8;
 
     public GameObject house2Help;
     public GameObject house3Help;
@@ -93,22 +107,54 @@ public class TextController : MonoBehaviour
 
             if (hamTextCnt == 1){
                 HText1.SetActive(true);
-                if(Input.GetKeyDown(KeyCode.Space)){
-                    hamTextCnt += 1;
+                if(Input.GetKeyUp(KeyCode.Space)){
+                    hamTextCnt =2;
                 }
             }
             if (hamTextCnt == 2){
+                Debug.Log("hit2");
                 HText1.SetActive(false);
                 HText2.SetActive(true);
-                if(Input.GetKeyDown(KeyCode.Space)){
-                    hamTextCnt += 1;
+                wait = true;
+                ////////////////Figure this out
+                pauseForText();
+                if(Input.GetKeyDown(KeyCode.Space) && wait == false){
+                    hamTextCnt =3;
                 }
             }
-            if (hamTextCnt == 3){
+            if (hamTextCnt == 3)
+            {
                 HText2.SetActive(false);
                 HText3.SetActive(true);
+                if (Input.GetKeyUp(KeyCode.Space))
+                {
+                    hamTextCnt =4;
+                }
+            }
+            if (hamTextCnt == 4)
+            {
+                HText3.SetActive(false);
+                HText4.SetActive(true);
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    hamTextCnt =5;
+                }
+            }
+            if (hamTextCnt == 5)
+            {
+                HText4.SetActive(false);
+                HText5.SetActive(true);
+                if (Input.GetKeyUp(KeyCode.Space))
+                {
+                    hamTextCnt =6;
+                }
+            }
+            if (hamTextCnt == 6)
+            {
+                HText5.SetActive(false);
+                HText6.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.Space)){
-                    HText3.SetActive(false);
+                    HText6.SetActive(false);
                     Destroy(fakeHam);
                     petSwap.cutScene = false;
                     hamTextCnt = -1;
@@ -136,11 +182,38 @@ public class TextController : MonoBehaviour
                     lizTextCnt += 1;
                 }
             }
-            if (lizTextCnt == 3){
+            if (lizTextCnt == 3)
+            {
                 LText2.SetActive(false);
                 LText3.SetActive(true);
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    lizTextCnt += 1;
+                }
+            }
+            if (lizTextCnt == 4)
+            {
+                LText3.SetActive(false);
+                LText4.SetActive(true);
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    lizTextCnt += 1;
+                }
+            }
+            if (lizTextCnt == 5)
+            {
+                LText4.SetActive(false);
+                LText5.SetActive(true);
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    lizTextCnt += 1;
+                }
+            }
+            if (lizTextCnt == 6){
+                LText5.SetActive(false);
+                LText6.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.Space)){
-                    LText3.SetActive(false);
+                    LText6.SetActive(false);
                     Destroy(fakeLiz);
                     petSwap.cutScene = false;
                     lizTextCnt = -1;
@@ -169,11 +242,38 @@ public class TextController : MonoBehaviour
                     TurtTextCnt += 1;
                 }
             }
-            if (TurtTextCnt == 3){
+            if (TurtTextCnt == 3)
+            {
                 TText2.SetActive(false);
                 TText3.SetActive(true);
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    TurtTextCnt += 1;
+                }
+            }
+            if (TurtTextCnt == 4)
+            {
+                TText3.SetActive(false);
+                TText4.SetActive(true);
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    TurtTextCnt += 1;
+                }
+            }
+            if (TurtTextCnt == 5)
+            {
+                TText4.SetActive(false);
+                TText5.SetActive(true);
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    TurtTextCnt += 1;
+                }
+            }
+            if (TurtTextCnt == 6){
+                TText5.SetActive(false);
+                TText6.SetActive(true);
                 if(Input.GetKeyDown(KeyCode.Space)){
-                    TText3.SetActive(false);
+                    TText6.SetActive(false);
                     Destroy(fakeTur);
                     petSwap.cutScene = false;
                     TurtTextCnt = -1;
@@ -208,11 +308,47 @@ public class TextController : MonoBehaviour
                     BirdTextCnt += 1;
                 }
             }
-            if (BirdTextCnt == 4){
+            if (BirdTextCnt == 4)
+            {
                 BText3.SetActive(false);
-                Btext4.SetActive(true);
+                BText4.SetActive(true);
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    BirdTextCnt += 1;
+                }
+            }
+            if (BirdTextCnt == 5)
+            {
+                BText4.SetActive(false);
+                BText5.SetActive(true);
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    BirdTextCnt += 1;
+                }
+            }
+            if (BirdTextCnt == 6)
+            {
+                BText5.SetActive(false);
+                BText6.SetActive(true);
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    BirdTextCnt += 1;
+                }
+            }
+            if (BirdTextCnt == 7)
+            {
+                BText6.SetActive(false);
+                BText7.SetActive(true);
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    BirdTextCnt += 1;
+                }
+            }
+            if (BirdTextCnt == 8){
+                BText7.SetActive(false);
+                BText8.SetActive(true);
                 if(Input.GetKeyDown(KeyCode.Space)){
-                    Btext4.SetActive(false);
+                    BText8.SetActive(false);
                     Destroy(fakeBird);
                     petSwap.cutScene = false;
                     BirdTextCnt = -1;
@@ -252,5 +388,10 @@ public class TextController : MonoBehaviour
             house3Help.SetActive(false);
         }
 
+    }
+    IEnumerator pauseForText()
+    {
+        yield return new WaitForSecondsRealtime(1);
+        wait = false;
     }
 }
