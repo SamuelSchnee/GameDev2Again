@@ -96,12 +96,12 @@ public class NewPetSwap : MonoBehaviour
             delayCounter += 1;
         }
 
-        if (delayCounter >= 200)
+       /* if (delayCounter >= 200)
         {
             cameraCnt.loadingStageBreak = true;
             waiting = false;
             delayCounter = 0;
-        }
+        }*/
 
         if (climbingWall == true)
         {
@@ -155,7 +155,7 @@ public class NewPetSwap : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.Alpha1) && dogActive == false && canSwitch == true)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && dogActive == false && canSwitch == true && cutScene == false)
         {
             dogActive = true;
 
@@ -165,7 +165,7 @@ public class NewPetSwap : MonoBehaviour
             hamsterActive = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha3) && lizardActive == false && lizardUnlock == true && canSwitch == true)
+        if (Input.GetKeyDown(KeyCode.Alpha3) && lizardActive == false && lizardUnlock == true && canSwitch == true && cutScene == false)
         {
             lizardActive = true;
 
@@ -175,7 +175,7 @@ public class NewPetSwap : MonoBehaviour
             hamsterActive = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2) && hamsterActive == false && hamsterUnlock == true && canSwitch == true)
+        if (Input.GetKeyDown(KeyCode.Alpha2) && hamsterActive == false && hamsterUnlock == true && canSwitch == true && cutScene == false)
         {
             hamsterActive = true;
 
@@ -185,7 +185,7 @@ public class NewPetSwap : MonoBehaviour
             lizardActive = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha4) && turtleActive == false && turtleUnlock == true && canSwitch == true)
+        if (Input.GetKeyDown(KeyCode.Alpha4) && turtleActive == false && turtleUnlock == true && canSwitch == true && cutScene == false)
         {
             turtleActive = true;
 
@@ -195,7 +195,7 @@ public class NewPetSwap : MonoBehaviour
             birdActive = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha5) && birdActive == false && birdUnlock == true && canSwitch == true)
+        if (Input.GetKeyDown(KeyCode.Alpha5) && birdActive == false && birdUnlock == true && canSwitch == true && cutScene == false)
         {
             birdActive = true;
 
@@ -246,7 +246,6 @@ public class NewPetSwap : MonoBehaviour
         {
             Debug.Log("entered");
             lizardUnlock = true;
-            Destroy(fakeLizard);
             HUD.unlockingLizard = true;
         }
 
@@ -254,7 +253,6 @@ public class NewPetSwap : MonoBehaviour
         {
             Debug.Log("bird unlocked");
             birdUnlock = true;
-            Destroy(fakeBird);
             waiting = true;
             HUD.unlockingBird = true;
         }
@@ -263,7 +261,6 @@ public class NewPetSwap : MonoBehaviour
         {
             Debug.Log("turtle unlocked");
             turtleUnlock = true;
-            Destroy(fakeTurtle);
             HUD.unlockingTurtle = true;
         }
 
@@ -271,7 +268,6 @@ public class NewPetSwap : MonoBehaviour
         {
             Debug.Log("hamster unlocked");
             hamsterUnlock = true;
-            Destroy(fakeHamster);
             HUD.unlockingHamster = true;
         }
 
@@ -457,7 +453,7 @@ public class NewPetSwap : MonoBehaviour
         transform.localScale = new Vector2(4.62f, 1.83f);
         playerBC.offset = new Vector2(0, 0.12f);
         speed = 20;
-        jumpStrength = 1000;
+        jumpStrength = 2500;
 
         if (jumpCount < 1)
         {

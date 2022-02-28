@@ -10743,7 +10743,7 @@ GameObject:
   - component: {fileID: 808132700}
   m_Layer: 0
   m_Name: ToyBox
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11900,7 +11900,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &920468149
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11910,14 +11910,14 @@ RectTransform:
   m_GameObject: {fileID: 920468148}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.0373, y: 1.1625, z: 1}
+  m_LocalScale: {x: 6.140784, y: 1.1625, z: 1}
   m_Children: []
   m_Father: {fileID: 1881677496}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 779, y: 45}
+  m_AnchoredPosition: {x: 14, y: -147}
   m_SizeDelta: {x: 104.4839, y: 112.4905}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &920468150
@@ -16338,7 +16338,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1235971787
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17000,7 +17000,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &1289117923
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -26352,6 +26352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   petSwap: {fileID: 1575486455}
   Hud: {fileID: 292389834}
+  camera: {fileID: 519420030}
   wait: 0
   unlock1: 0
   unlock2: 0
@@ -26364,6 +26365,7 @@ MonoBehaviour:
   lizTextCnt: 0
   TurtTextCnt: 0
   BirdTextCnt: 0
+  textBox: {fileID: 920468148}
   fakeHam: {fileID: 808835162}
   fakeLiz: {fileID: 700446802}
   fakeTur: {fileID: 308640391}

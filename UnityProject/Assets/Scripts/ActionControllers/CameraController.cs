@@ -34,7 +34,7 @@ public class CameraController : MonoBehaviour
             /*blackScreen.SetActive(true);
             loadTime += 1;
             tele.houseBreak = true;*/
-            houseBreakCutscene();
+            StartCoroutine(houseBreakCutscene());
         }
 
         if (loadTime >= 500)

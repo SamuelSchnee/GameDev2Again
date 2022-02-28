@@ -7,6 +7,7 @@ public class TextController : MonoBehaviour
 {
     public NewPetSwap petSwap;
     public HUDController Hud;
+    public CameraController camera;
     public bool wait;
 
     private bool hamsterUnlocked;
@@ -28,6 +29,8 @@ public class TextController : MonoBehaviour
     public int lizTextCnt = 0;
     public int TurtTextCnt = 0;
     public int BirdTextCnt = 0;
+
+    public GameObject textBox;
 
     public GameObject fakeHam;
     public GameObject fakeLiz;
@@ -104,63 +107,7 @@ public class TextController : MonoBehaviour
         if( unlock1 == true)
         {
             petSwap.cutScene = true;
-
-            if (hamTextCnt == 1){
-                HText1.SetActive(true);
-                if(Input.GetKeyUp(KeyCode.Space)){
-                    hamTextCnt =2;
-                }
-            }
-            if (hamTextCnt == 2){
-                Debug.Log("hit2");
-                HText1.SetActive(false);
-                HText2.SetActive(true);
-                wait = true;
-                ////////////////Figure this out
-                pauseForText();
-                if(Input.GetKeyDown(KeyCode.Space) && wait == false){
-                    hamTextCnt =3;
-                }
-            }
-            if (hamTextCnt == 3)
-            {
-                HText2.SetActive(false);
-                HText3.SetActive(true);
-                if (Input.GetKeyUp(KeyCode.Space))
-                {
-                    hamTextCnt =4;
-                }
-            }
-            if (hamTextCnt == 4)
-            {
-                HText3.SetActive(false);
-                HText4.SetActive(true);
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    hamTextCnt =5;
-                }
-            }
-            if (hamTextCnt == 5)
-            {
-                HText4.SetActive(false);
-                HText5.SetActive(true);
-                if (Input.GetKeyUp(KeyCode.Space))
-                {
-                    hamTextCnt =6;
-                }
-            }
-            if (hamTextCnt == 6)
-            {
-                HText5.SetActive(false);
-                HText6.SetActive(true);
-                if (Input.GetKeyDown(KeyCode.Space)){
-                    HText6.SetActive(false);
-                    Destroy(fakeHam);
-                    petSwap.cutScene = false;
-                    hamTextCnt = -1;
-                    unlock1 = false;
-                }
-            }
+            StartCoroutine(pauseForHamText());
         }
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     ///Lizard Text
@@ -168,59 +115,7 @@ public class TextController : MonoBehaviour
         if (unlock2 == true)
         {
             petSwap.cutScene = true;
-
-            if (lizTextCnt == 1){
-                LText1.SetActive(true);
-                if(Input.GetKeyDown(KeyCode.Space)){
-                lizTextCnt += 1;
-                }
-            }
-            if (lizTextCnt == 2){
-                LText1.SetActive(false);
-                LText2.SetActive(true);
-                if (Input.GetKeyDown(KeyCode.Space)){
-                    lizTextCnt += 1;
-                }
-            }
-            if (lizTextCnt == 3)
-            {
-                LText2.SetActive(false);
-                LText3.SetActive(true);
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    lizTextCnt += 1;
-                }
-            }
-            if (lizTextCnt == 4)
-            {
-                LText3.SetActive(false);
-                LText4.SetActive(true);
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    lizTextCnt += 1;
-                }
-            }
-            if (lizTextCnt == 5)
-            {
-                LText4.SetActive(false);
-                LText5.SetActive(true);
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    lizTextCnt += 1;
-                }
-            }
-            if (lizTextCnt == 6){
-                LText5.SetActive(false);
-                LText6.SetActive(true);
-                if (Input.GetKeyDown(KeyCode.Space)){
-                    LText6.SetActive(false);
-                    Destroy(fakeLiz);
-                    petSwap.cutScene = false;
-                    lizTextCnt = -1;
-                    unlock2 = false;
-                }
-            }
-            
+            StartCoroutine(pauseForLizText());   
         }
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     ///Turtle Text
@@ -228,58 +123,7 @@ public class TextController : MonoBehaviour
         if (unlock3 == true)
         {
             petSwap.cutScene = true;
-
-            if (TurtTextCnt == 1){
-                TTExt1.SetActive(true);
-                if(Input.GetKeyDown(KeyCode.Space)){
-                    TurtTextCnt += 1;
-                }
-            }
-            if (TurtTextCnt == 2){
-                TTExt1.SetActive(false);
-                TText2.SetActive(true);
-                if(Input.GetKeyDown(KeyCode.Space)){
-                    TurtTextCnt += 1;
-                }
-            }
-            if (TurtTextCnt == 3)
-            {
-                TText2.SetActive(false);
-                TText3.SetActive(true);
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    TurtTextCnt += 1;
-                }
-            }
-            if (TurtTextCnt == 4)
-            {
-                TText3.SetActive(false);
-                TText4.SetActive(true);
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    TurtTextCnt += 1;
-                }
-            }
-            if (TurtTextCnt == 5)
-            {
-                TText4.SetActive(false);
-                TText5.SetActive(true);
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    TurtTextCnt += 1;
-                }
-            }
-            if (TurtTextCnt == 6){
-                TText5.SetActive(false);
-                TText6.SetActive(true);
-                if(Input.GetKeyDown(KeyCode.Space)){
-                    TText6.SetActive(false);
-                    Destroy(fakeTur);
-                    petSwap.cutScene = false;
-                    TurtTextCnt = -1;
-                    unlock3 = false;
-                }
-            }
+            StartCoroutine(pauseForTurtText());
         }
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     ///Bird Text
@@ -287,74 +131,7 @@ public class TextController : MonoBehaviour
         if (unlock4 == true)
         {
             petSwap.cutScene = true;
-
-            if (BirdTextCnt == 1){
-                BText1.SetActive(true);
-                if(Input.GetKeyDown(KeyCode.Space)){
-                    BirdTextCnt += 1;
-                }
-            }
-            if (BirdTextCnt == 2){
-                BText1.SetActive(false);
-                BText2.SetActive(true);
-                if(Input.GetKeyDown(KeyCode.Space)){
-                    BirdTextCnt += 1;
-                }
-            }
-            if (BirdTextCnt == 3){
-                BText2.SetActive(false);
-                BText3.SetActive(true);
-                if(Input.GetKeyDown(KeyCode.Space)){
-                    BirdTextCnt += 1;
-                }
-            }
-            if (BirdTextCnt == 4)
-            {
-                BText3.SetActive(false);
-                BText4.SetActive(true);
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    BirdTextCnt += 1;
-                }
-            }
-            if (BirdTextCnt == 5)
-            {
-                BText4.SetActive(false);
-                BText5.SetActive(true);
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    BirdTextCnt += 1;
-                }
-            }
-            if (BirdTextCnt == 6)
-            {
-                BText5.SetActive(false);
-                BText6.SetActive(true);
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    BirdTextCnt += 1;
-                }
-            }
-            if (BirdTextCnt == 7)
-            {
-                BText6.SetActive(false);
-                BText7.SetActive(true);
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    BirdTextCnt += 1;
-                }
-            }
-            if (BirdTextCnt == 8){
-                BText7.SetActive(false);
-                BText8.SetActive(true);
-                if(Input.GetKeyDown(KeyCode.Space)){
-                    BText8.SetActive(false);
-                    Destroy(fakeBird);
-                    petSwap.cutScene = false;
-                    BirdTextCnt = -1;
-                    unlock4 = false;
-                }
-            }
+            StartCoroutine(pauseForBirdText());
         }
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         if (House2INVLD == true)
@@ -376,22 +153,320 @@ public class TextController : MonoBehaviour
         if (House2INVLD == true)
         {
             yield return new WaitForSecondsRealtime(1);
+            textBox.SetActive(true);
             house2Help.SetActive(true);
             yield return new WaitForSecondsRealtime(2);
+            textBox.SetActive(false);
             house2Help.SetActive(false);
         }
         if (House3INVLD == true)
         {
             yield return new WaitForSecondsRealtime(1);
+            textBox.SetActive(true);
             house3Help.SetActive(true);
             yield return new WaitForSecondsRealtime(2);
             house3Help.SetActive(false);
+            textBox.SetActive(false);
         }
 
     }
-    IEnumerator pauseForText()
+    IEnumerator pauseForHamText()
     {
-        yield return new WaitForSecondsRealtime(1);
-        wait = false;
+        if (hamTextCnt == 1)
+        {
+            textBox.SetActive(true);
+            HText1.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                hamTextCnt = 2;
+            }
+        }
+        if (hamTextCnt == 2)
+        {
+            Debug.Log("hit2");
+            HText1.SetActive(false);
+            HText2.SetActive(true);
+            yield return new WaitForSeconds(.75f);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                hamTextCnt = 3;
+            }
+        }
+        if (hamTextCnt == 3)
+        {
+            HText2.SetActive(false);
+            HText3.SetActive(true);
+            yield return new WaitForSeconds(.75f);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                hamTextCnt = 4;
+            }
+        }
+        if (hamTextCnt == 4)
+        {
+            HText3.SetActive(false);
+            HText4.SetActive(true);
+            yield return new WaitForSeconds(.75f);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                hamTextCnt = 5;
+            }
+        }
+        if (hamTextCnt == 5)
+        {
+            HText4.SetActive(false);
+            HText5.SetActive(true);
+            yield return new WaitForSeconds(.75f);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                hamTextCnt = 6;
+            }
+        }
+        if (hamTextCnt == 6)
+        {
+            HText5.SetActive(false);
+            HText6.SetActive(true);
+            yield return new WaitForSeconds(.75f);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                textBox.SetActive(false);
+                HText6.SetActive(false);
+                Destroy(fakeHam);
+                petSwap.cutScene = false;
+                hamTextCnt = -1;
+                unlock1 = false;
+            }
+        }
+    }
+    /// <summary>
+    /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /// </summary>
+    /// <returns></returns>
+    IEnumerator pauseForLizText()
+    {
+        if (lizTextCnt == 1)
+        {
+            textBox.SetActive(true);
+            LText1.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                lizTextCnt =2;
+            }
+        }
+        if (lizTextCnt == 2)
+        {
+            LText1.SetActive(false);
+            LText2.SetActive(true);
+            yield return new WaitForSeconds(.75f);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                lizTextCnt =3;
+            }
+        }
+        if (lizTextCnt == 3)
+        {
+            LText2.SetActive(false);
+            LText3.SetActive(true);
+            yield return new WaitForSeconds(.75f);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                lizTextCnt =4;
+            }
+        }
+        if (lizTextCnt == 4)
+        {
+            LText3.SetActive(false);
+            LText4.SetActive(true);
+            yield return new WaitForSeconds(.75f);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                lizTextCnt =5;
+            }
+        }
+        if (lizTextCnt == 5)
+        {
+            LText4.SetActive(false);
+            LText5.SetActive(true);
+            yield return new WaitForSeconds(.75f);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                lizTextCnt =6;
+            }
+        }
+        if (lizTextCnt == 6)
+        {
+            LText5.SetActive(false);
+            LText6.SetActive(true);
+            yield return new WaitForSeconds(.75f);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                textBox.SetActive(false);
+                LText6.SetActive(false);
+                Destroy(fakeLiz);
+                petSwap.cutScene = false;
+                lizTextCnt = -1;
+                unlock2 = false;
+            }
+        }
+    }
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///
+    IEnumerator pauseForTurtText()
+    {
+        if (TurtTextCnt == 1)
+        {
+            textBox.SetActive(true);
+            TTExt1.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                TurtTextCnt =2;
+            }
+        }
+        if (TurtTextCnt == 2)
+        {
+            TTExt1.SetActive(false);
+            TText2.SetActive(true);
+            yield return new WaitForSeconds(.75f);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                TurtTextCnt =3;
+            }
+        }
+        if (TurtTextCnt == 3)
+        {
+            TText2.SetActive(false);
+            TText3.SetActive(true);
+            yield return new WaitForSeconds(.75f);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                TurtTextCnt =4;
+            }
+        }
+        if (TurtTextCnt == 4)
+        {
+            TText3.SetActive(false);
+            TText4.SetActive(true);
+            yield return new WaitForSeconds(.75f);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                TurtTextCnt =5;
+            }
+        }
+        if (TurtTextCnt == 5)
+        {
+            TText4.SetActive(false);
+            TText5.SetActive(true);
+            yield return new WaitForSeconds(.75f);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                TurtTextCnt =6;
+            }
+        }
+        if (TurtTextCnt == 6)
+        {
+            TText5.SetActive(false);
+            TText6.SetActive(true);
+            yield return new WaitForSeconds(.75f);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                textBox.SetActive(false);
+                TText6.SetActive(false);
+                Destroy(fakeTur);
+                petSwap.cutScene = false;
+                TurtTextCnt = -1;
+                unlock3 = false;
+            }
+        }
+    }
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///
+    IEnumerator pauseForBirdText()
+    {
+        textBox.SetActive(true);
+        if (BirdTextCnt == 1)
+        {
+            BText1.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                BirdTextCnt =2;
+            }
+        }
+        if (BirdTextCnt == 2)
+        {
+            BText1.SetActive(false);
+            BText2.SetActive(true);
+            yield return new WaitForSeconds(.75f);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                BirdTextCnt =3;
+            }
+        }
+        if (BirdTextCnt == 3)
+        {
+            BText2.SetActive(false);
+            BText3.SetActive(true);
+            yield return new WaitForSeconds(.75f);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                BirdTextCnt =4;
+            }
+        }
+        if (BirdTextCnt == 4)
+        {
+            BText3.SetActive(false);
+            yield return new WaitForSeconds(.75f);
+            BText4.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                BirdTextCnt =5;
+            }
+        }
+        if (BirdTextCnt == 5)
+        {
+            BText4.SetActive(false);
+            BText5.SetActive(true);
+            yield return new WaitForSeconds(.75f);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                BirdTextCnt =6;
+            }
+        }
+        if (BirdTextCnt == 6)
+        {
+            BText5.SetActive(false);
+            BText6.SetActive(true);
+            yield return new WaitForSeconds(.75f);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                BirdTextCnt =7;
+            }
+        }
+        if (BirdTextCnt == 7)
+        {
+            BText6.SetActive(false);
+            BText7.SetActive(true);
+            yield return new WaitForSeconds(.75f);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                BirdTextCnt =8;
+            }
+        }
+        if (BirdTextCnt == 8)
+        {
+            BText7.SetActive(false);
+            BText8.SetActive(true);
+            yield return new WaitForSeconds(.75f);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                textBox.SetActive(false);
+                BText8.SetActive(false);
+                Destroy(fakeBird);
+                petSwap.cutScene = false;
+                BirdTextCnt = -1;
+                unlock4 = false;
+                yield return new WaitForSeconds(2);
+                camera.loadingStageBreak = true;
+            }
+        }
     }
 }
