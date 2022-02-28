@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class TeleporterScript : MonoBehaviour
 {
     public NewPetSwap petSwap;
+    public TextController text;
 
     public bool house1I = false;
     public bool house1O = false;
@@ -79,6 +80,10 @@ public class TeleporterScript : MonoBehaviour
         if (house2I == true)
         {
             player.transform.position = HouseIn2.transform.position;
+            if (petSwap.hamsterUnlock == false)
+            {
+                text.House2INVLD = true;
+            }
             house2I = false;
         }
         if (house2O == true)
@@ -89,6 +94,10 @@ public class TeleporterScript : MonoBehaviour
         if (house3I == true)
         {
             player.transform.position = HouseIn3.transform.position;
+            if (petSwap.lizardUnlock == false)
+            {
+                text.House3INVLD = true;
+            }
             house3I = false;
         }
         if (house3O == true)

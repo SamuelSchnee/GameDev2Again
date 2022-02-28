@@ -7,6 +7,7 @@ public class CameraController : MonoBehaviour
     public GameObject player;
     public bool loadingStageBreak = false;
     public TeleporterScript tele;
+    public NewPetSwap petswap;
 
     public float loadTime;
 
@@ -25,14 +26,15 @@ public class CameraController : MonoBehaviour
 
         if (loadingStageBreak == false)
         {
-            blackScreen.transform.position = new Vector2(-50, 50);
+            blackScreen.SetActive(false);
         }
 
         if (loadingStageBreak == true)
         {
-            blackScreen.transform.position = new Vector3(transform.position.x, transform.position.y, -50);
+            /*blackScreen.SetActive(true);
             loadTime += 1;
-            tele.houseBreak = true;
+            tele.houseBreak = true;*/
+            houseBreakCutscene();
         }
 
         if (loadTime >= 500)
@@ -40,5 +42,15 @@ public class CameraController : MonoBehaviour
             loadingStageBreak = false;
             
         }
+    }
+    IEnumerator houseBreakCutscene()
+    {
+        blackScreen.SetActive(true);
+        petswap.cutScene = true;
+        tele.houseBreak = true;
+        yield return new WaitForSecondsRealtime(1.5f);
+        loadingStageBreak = false;
+        petswap.cutScene = false;
+
     }
 }

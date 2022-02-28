@@ -18,6 +18,11 @@ public class TextController : MonoBehaviour
     public bool unlock3;
     public bool unlock4;
 
+    public bool House2INVLD = false;
+    public bool House3INVLD = false;
+    public bool House4INVLD = false;
+
+
     public int hamTextCnt = 0;
     public int lizTextCnt = 0;
     public int TurtTextCnt = 0;
@@ -44,6 +49,10 @@ public class TextController : MonoBehaviour
     public GameObject BText2;
     public GameObject BText3;
     public GameObject Btext4;
+
+    public GameObject house2Help;
+    public GameObject house3Help;
+    public GameObject house4Help;
     // Start is called before the first frame update
     void Start()
     {
@@ -75,6 +84,8 @@ public class TextController : MonoBehaviour
             unlock4 = true;
             BirdTextCnt = 1;
         }
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///Hamster Text
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         if( unlock1 == true)
         {
@@ -106,6 +117,8 @@ public class TextController : MonoBehaviour
             }
         }
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///Lizard Text
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         if (unlock2 == true)
         {
             petSwap.cutScene = true;
@@ -136,6 +149,8 @@ public class TextController : MonoBehaviour
             }
             
         }
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///Turtle Text
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         if (unlock3 == true)
         {
@@ -166,6 +181,8 @@ public class TextController : MonoBehaviour
                 }
             }
         }
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///Bird Text
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         if (unlock4 == true)
         {
@@ -203,5 +220,37 @@ public class TextController : MonoBehaviour
                 }
             }
         }
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        if (House2INVLD == true)
+        {
+            helpText();
+        }
+        if (House3INVLD == true)
+        {
+            helpText();
+        }
+        if (House4INVLD == true)
+        {
+            helpText();
+        }
+    }
+
+    IEnumerator helpText()
+    {
+        if (House2INVLD == true)
+        {
+            yield return new WaitForSecondsRealtime(1);
+            house2Help.SetActive(true);
+            yield return new WaitForSecondsRealtime(2);
+            house2Help.SetActive(false);
+        }
+        if (House3INVLD == true)
+        {
+            yield return new WaitForSecondsRealtime(1);
+            house3Help.SetActive(true);
+            yield return new WaitForSecondsRealtime(2);
+            house3Help.SetActive(false);
+        }
+
     }
 }
