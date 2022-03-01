@@ -200,7 +200,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 92599652}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.28181624, y: -2.6100054, z: 0}
+  m_LocalPosition: {x: -0.28181624, y: -2.1616728, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -240,7 +240,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 121, y: 110}
+  m_AnchoredPosition: {x: 121, y: 141}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &107690036
@@ -420,7 +420,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 109590012}
   m_LocalRotation: {x: -0, y: -0, z: -0.4065053, w: 0.9136485}
-  m_LocalPosition: {x: -0.2, y: -4.3, z: 0}
+  m_LocalPosition: {x: -0.2, y: -3.73, z: 0}
   m_LocalScale: {x: 4.975, y: 6.414495, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -526,7 +526,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -271, y: 114}
+  m_AnchoredPosition: {x: -271, y: 145}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &186314689
@@ -662,7 +662,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 126, y: 78}
+  m_AnchoredPosition: {x: 126, y: 109}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &262959537
@@ -937,7 +937,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -274, y: 70}
+  m_AnchoredPosition: {x: -274, y: 109}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &441875128
@@ -962,12 +962,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Explore the various houses in the town in order to save the other animals.
 
-    Resque
+    Rescue
     all 5 animals and then escape the final house to win!
 
 
-    TIP: if you find
-    yourself stuck on how to progress, try switching to a different animal!'
+    Switch Between Unlocked
+    Characters with 1,2 ,3 ,4 & 5
+
+
+    TIP: if you find yourself stuck on how to
+    progress, try switching to a different animal!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1204,7 +1208,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 556331350}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.09000015, y: -1.35, z: 0}
+  m_LocalPosition: {x: -0.09000015, y: -0.75, z: 0}
   m_LocalScale: {x: 0.35929, y: 0.35929, z: 0.35929}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1287,7 +1291,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 881030814}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1234521, y: -2.7783325, z: 0}
+  m_LocalPosition: {x: -1.1234521, y: -2.33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1370,7 +1374,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1044349121}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: -0.651, y: 1.701, z: 0}
+  m_LocalPosition: {x: -0.651, y: 2.6, z: 0}
   m_LocalScale: {x: 3.868217, y: 2.787904, z: 2.787904}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1453,7 +1457,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1068261094}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.01, y: 1.71, z: 0}
+  m_LocalPosition: {x: -0.01, y: 2.609, z: 0}
   m_LocalScale: {x: 2.8449, y: 2.8449, z: 2.8449}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1670,7 +1674,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1268660609}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.09000015, y: -1.35, z: 0}
+  m_LocalPosition: {x: -0.09000015, y: -0.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1857,7 +1861,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1528367631}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.6702634, y: -3.2962623, z: 0}
+  m_LocalPosition: {x: -0.6702634, y: -2.8479297, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1940,7 +1944,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1677587426}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.09, y: -1.65, z: 0}
+  m_LocalPosition: {x: -0.09, y: -1.05, z: 0}
   m_LocalScale: {x: 1.0375, y: 0.41718674, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2023,7 +2027,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008605267}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2399863, y: -2.221558, z: 0}
+  m_LocalPosition: {x: -1.2399863, y: -1.7732255, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2106,7 +2110,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2119302452}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.02, y: 0.16, z: 0}
+  m_LocalPosition: {x: -0.02, y: 1.01, z: 0}
   m_LocalScale: {x: 1.9460402, y: 2.4983315, z: 1.9460402}
   m_Children: []
   m_Father: {fileID: 0}

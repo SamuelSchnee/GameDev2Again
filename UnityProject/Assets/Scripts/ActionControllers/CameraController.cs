@@ -13,16 +13,21 @@ public class CameraController : MonoBehaviour
 
     public GameObject blackScreen;
 
+    public bool followingPlayer = true;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        followingPlayer = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 2, -60);
+        if (followingPlayer == true)
+        {
+            transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 2, -60);
+        }
 
         if (loadingStageBreak == false)
         {

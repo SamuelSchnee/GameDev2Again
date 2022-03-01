@@ -119,21 +119,25 @@ public class TeleporterScript : MonoBehaviour
         if (hamsterI1 == true)
         {
             player.transform.position = HamsterIn1.transform.position;
+            petSwap.canSwitch = false;
             hamsterI1 = false;
         }
         if (hamsterI2 == true)
         {
             player.transform.position = HamsterIn2.transform.position;
+            petSwap.canSwitch = false;
             hamsterI2 = false;
         }
         if (hamsterO1 == true)
         {
             player.transform.position = HamsterOut1.transform.position;
+            petSwap.canSwitch = true;
             hamsterO1 = false;
         }
         if (hamsterO2 == true)
         {
             player.transform.position = HamsterOut2.transform.position;
+            petSwap.canSwitch = true;
             hamsterO2 = false;
         }
 

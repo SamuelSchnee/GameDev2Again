@@ -42,7 +42,7 @@ public class NewPetSwap : MonoBehaviour
     public bool birdActive = false;
     public bool turtleActive = false;
     public bool hamsterActive = false;
-    private bool canSwitch;
+    public bool canSwitch;
     public bool waiting;
     public bool cutScene = false;
 
@@ -216,15 +216,6 @@ public class NewPetSwap : MonoBehaviour
             waterWall2.SetActive(true);
         }
 
-        if (transform.position.x < 133 && transform.position.x > 94.5)
-        {
-            canSwitch = false;
-        }
-        else
-        {
-            canSwitch = true;
-        }
-
         if (gemCount == 5)
         {
             SceneManager.LoadScene("WinScene");
@@ -246,7 +237,6 @@ public class NewPetSwap : MonoBehaviour
         {
             Debug.Log("entered");
             lizardUnlock = true;
-            HUD.unlockingLizard = true;
         }
 
         if (other.gameObject.tag == "birdUnlock" && Input.GetKeyDown(KeyCode.E))
@@ -254,21 +244,18 @@ public class NewPetSwap : MonoBehaviour
             Debug.Log("bird unlocked");
             birdUnlock = true;
             waiting = true;
-            HUD.unlockingBird = true;
         }
 
         if (other.gameObject.tag == "turtleUnlock" && Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("turtle unlocked");
             turtleUnlock = true;
-            HUD.unlockingTurtle = true;
         }
 
         if (other.gameObject.tag == "hamsterUnlock" && Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("hamster unlocked");
             hamsterUnlock = true;
-            HUD.unlockingHamster = true;
         }
 
         if (other.gameObject.tag == "wall" && lizardActive == true)
@@ -450,10 +437,10 @@ public class NewPetSwap : MonoBehaviour
 
     private void playAsDog()
     {
-        transform.localScale = new Vector2(4.62f, 1.83f);
+        transform.localScale = new Vector2(4.089289f, 2.757078f);
         playerBC.offset = new Vector2(0, 0.12f);
         speed = 20;
-        jumpStrength = 2500;
+        jumpStrength = 2000;
 
         if (jumpCount < 1)
         {
@@ -465,8 +452,8 @@ public class NewPetSwap : MonoBehaviour
     {
         speed = 5;
         jumpStrength = 0;
-        transform.localScale = new Vector2(2.46f, 0.6f);
-        playerBC.offset = new Vector2(-.04f, -.05f);
+        transform.localScale = new Vector2(1.75f, 0.75f);
+        playerBC.offset = new Vector2(0.07f, -0.05f);
     }
 
     private void playAsHamster()
@@ -474,12 +461,14 @@ public class NewPetSwap : MonoBehaviour
         speed = 10;
         transform.localScale = new Vector2(1.04f, 0.4424591f);
         playerBC.offset = new Vector2(0, -.05f);
+        jumpStrength = 1650;
     }
 
     private void playAsTurtle()
     {
         speed = 2;
-        transform.localScale = new Vector2(1.77f, 0.75f);
+        transform.localScale = new Vector2(1.38f, 0.6f);
+        playerBC.offset = new Vector2(-0.01f, 0.1f);
 
         if (inWater == true)
         {
@@ -499,7 +488,8 @@ public class NewPetSwap : MonoBehaviour
     {
         speed = 4;
         transform.localScale = new Vector2(1.88f, 1.05f);
-        playerBC.offset = new Vector2(0, 0.04f);
+        playerBC.offset = new Vector2(0, 0.09f);
+        playerBC.size = new Vector2(1, 1.06f);
 
         if (jumpCount < 2)
         {
@@ -513,12 +503,12 @@ public class NewPetSwap : MonoBehaviour
 
         if (jumpCount == 0 || jumpCount == 2)
         {
-            jumpStrength = 400;
+            jumpStrength = 2000;
         }
 
         if (jumpCount == 1)
         {
-            jumpStrength = 500;
+            jumpStrength = 2500;
         }
 
         if (Input.GetKeyDown(KeyCode.S) && jumpCount == 0)

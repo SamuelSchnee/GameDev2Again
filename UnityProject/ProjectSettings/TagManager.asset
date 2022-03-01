@@ -38,6 +38,8 @@ TagManager:
   - startDoorOut
   - StartDoorIn
   - waterWall
+  - noSwap
+  - cameraStop
   layers:
   - Default
   - TransparentFX

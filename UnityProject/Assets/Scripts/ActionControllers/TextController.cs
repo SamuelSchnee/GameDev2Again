@@ -7,7 +7,8 @@ public class TextController : MonoBehaviour
 {
     public NewPetSwap petSwap;
     public HUDController Hud;
-    public CameraController camera;
+    public CameraController cameraCnt;
+
     public bool wait;
 
     private bool hamsterUnlocked;
@@ -233,6 +234,7 @@ public class TextController : MonoBehaviour
                 HText6.SetActive(false);
                 Destroy(fakeHam);
                 petSwap.cutScene = false;
+                Hud.unlockingHamster = true;
                 hamTextCnt = -1;
                 unlock1 = false;
             }
@@ -303,6 +305,7 @@ public class TextController : MonoBehaviour
                 textBox.SetActive(false);
                 LText6.SetActive(false);
                 Destroy(fakeLiz);
+                Hud.unlockingLizard = true;
                 petSwap.cutScene = false;
                 lizTextCnt = -1;
                 unlock2 = false;
@@ -372,6 +375,7 @@ public class TextController : MonoBehaviour
                 textBox.SetActive(false);
                 TText6.SetActive(false);
                 Destroy(fakeTur);
+                Hud.unlockingTurtle = true;
                 petSwap.cutScene = false;
                 TurtTextCnt = -1;
                 unlock3 = false;
@@ -461,11 +465,12 @@ public class TextController : MonoBehaviour
                 textBox.SetActive(false);
                 BText8.SetActive(false);
                 Destroy(fakeBird);
+                Hud.unlockingBird = true;
                 petSwap.cutScene = false;
                 BirdTextCnt = -1;
                 unlock4 = false;
-                yield return new WaitForSeconds(2);
-                camera.loadingStageBreak = true;
+                yield return new WaitForSeconds(1);
+                cameraCnt.loadingStageBreak = true;
             }
         }
     }
