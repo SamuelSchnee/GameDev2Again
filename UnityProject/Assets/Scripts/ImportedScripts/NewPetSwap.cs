@@ -440,7 +440,7 @@ public class NewPetSwap : MonoBehaviour
         transform.localScale = new Vector2(4.089289f, 2.757078f);
         playerBC.offset = new Vector2(0, 0.12f);
         speed = 20;
-        jumpStrength = 2000;
+        jumpStrength = 600;
 
         if (jumpCount < 1)
         {
@@ -461,7 +461,7 @@ public class NewPetSwap : MonoBehaviour
         speed = 10;
         transform.localScale = new Vector2(1.04f, 0.4424591f);
         playerBC.offset = new Vector2(0, -.05f);
-        jumpStrength = 1650;
+        jumpStrength = 550;
     }
 
     private void playAsTurtle()
@@ -503,12 +503,12 @@ public class NewPetSwap : MonoBehaviour
 
         if (jumpCount == 0 || jumpCount == 2)
         {
-            jumpStrength = 2000;
+            jumpStrength = 550;
         }
 
         if (jumpCount == 1)
         {
-            jumpStrength = 2500;
+            jumpStrength = 600;
         }
 
         if (Input.GetKeyDown(KeyCode.S) && jumpCount == 0)

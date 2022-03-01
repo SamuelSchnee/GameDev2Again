@@ -28,6 +28,10 @@ public class CameraController : MonoBehaviour
         {
             transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 2, -60);
         }
+        if (followingPlayer == false)
+        {
+            transform.position = new Vector3(transform.position.x, player.transform.position.y + 2, -60);
+        }
 
         if (loadingStageBreak == false)
         {
