@@ -159,6 +159,7 @@ public class TextController : MonoBehaviour
             yield return new WaitForSecondsRealtime(2);
             textBox.SetActive(false);
             house2Help.SetActive(false);
+            House2INVLD = false;
         }
         if (House3INVLD == true)
         {
@@ -168,6 +169,7 @@ public class TextController : MonoBehaviour
             yield return new WaitForSecondsRealtime(2);
             house3Help.SetActive(false);
             textBox.SetActive(false);
+            House3INVLD = false;
         }
 
     }
