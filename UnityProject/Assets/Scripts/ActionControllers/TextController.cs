@@ -153,20 +153,20 @@ public class TextController : MonoBehaviour
     {
         if (House2INVLD == true)
         {
-            yield return new WaitForSecondsRealtime(1);
+            yield return new WaitForSeconds(1);
             textBox.SetActive(true);
             house2Help.SetActive(true);
-            yield return new WaitForSecondsRealtime(2);
+            yield return new WaitForSeconds(2);
             textBox.SetActive(false);
             house2Help.SetActive(false);
             House2INVLD = false;
         }
         if (House3INVLD == true)
         {
-            yield return new WaitForSecondsRealtime(1);
+            yield return new WaitForSeconds(1);
             textBox.SetActive(true);
             house3Help.SetActive(true);
-            yield return new WaitForSecondsRealtime(2);
+            yield return new WaitForSeconds(2);
             house3Help.SetActive(false);
             textBox.SetActive(false);
             House3INVLD = false;
