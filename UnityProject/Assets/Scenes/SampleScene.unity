@@ -16117,6 +16117,9 @@ MonoBehaviour:
   brokenHouse: {fileID: 1039671511}
   SDI: {fileID: 1492565702}
   SDO: {fileID: 1524142243}
+  lizardhelptext: {fileID: 6349693109908497624}
+  turtlehelptext: {fileID: 6349693109145909380}
+  textBox: {fileID: 920468148}
 --- !u!4 &1078171697
 Transform:
   m_ObjectHideFlags: 0

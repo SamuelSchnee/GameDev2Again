@@ -46,6 +46,10 @@ public class TeleporterScript : MonoBehaviour
     public GameObject SDI;
     public GameObject SDO;
 
+    public GameObject lizardhelptext;
+    public GameObject turtlehelptext;
+    public GameObject textBox;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -82,7 +86,7 @@ public class TeleporterScript : MonoBehaviour
             player.transform.position = HouseIn2.transform.position;
             if (petSwap.hamsterUnlock == false)
             {
-                text.House2INVLD = true;
+                StartCoroutine(LizardHelp());
             }
             house2I = false;
         }
@@ -96,7 +100,7 @@ public class TeleporterScript : MonoBehaviour
             player.transform.position = HouseIn3.transform.position;
             if (petSwap.lizardUnlock == false)
             {
-                text.House3INVLD = true;
+                StartCoroutine(turtleHelp());
             }
             house3I = false;
         }
@@ -161,5 +165,22 @@ public class TeleporterScript : MonoBehaviour
             player.transform.position = SDI.transform.position;
             startDoorIn = false;
         }
+    }
+
+    IEnumerator LizardHelp(){
+         yield return new WaitForSeconds(.5f);
+         lizardhelptext.SetActive(true);
+         textBox.SetActive(true);
+         yield return new WaitForSeconds(4);
+         lizardhelptext.SetActive(false);
+         textBox.SetActive(false);
+    }
+    IEnumerator turtleHelp(){
+        yield return new WaitForSeconds(.5f);
+        turtlehelptext.SetActive(true);
+        textBox.SetActive(true);
+        yield return new WaitForSeconds(4);
+        turtlehelptext.SetActive(false);
+        textBox.SetActive(false);
     }
 }
