@@ -32,6 +32,7 @@ public class TextController : MonoBehaviour
     public int BirdTextCnt = 0;
 
     public GameObject textBox;
+    public GameObject spacebar;
 
     public GameObject fakeHam;
     public GameObject fakeLiz;
@@ -177,6 +178,7 @@ public class TextController : MonoBehaviour
     {
         if (hamTextCnt == 1)
         {
+            spacebar.SetActive(true);
             textBox.SetActive(true);
             HText1.SetActive(true);
             if (Input.GetKeyDown(KeyCode.Space))
@@ -237,6 +239,7 @@ public class TextController : MonoBehaviour
                 Destroy(fakeHam);
                 petSwap.cutScene = false;
                 Hud.unlockingHamster = true;
+                spacebar.SetActive(false);
                 hamTextCnt = -1;
                 unlock1 = false;
             }
@@ -250,6 +253,7 @@ public class TextController : MonoBehaviour
     {
         if (lizTextCnt == 1)
         {
+            spacebar.SetActive(true);
             textBox.SetActive(true);
             LText1.SetActive(true);
             if (Input.GetKeyDown(KeyCode.Space))
@@ -309,6 +313,7 @@ public class TextController : MonoBehaviour
                 Destroy(fakeLiz);
                 Hud.unlockingLizard = true;
                 petSwap.cutScene = false;
+                spacebar.SetActive(false);
                 lizTextCnt = -1;
                 unlock2 = false;
             }
@@ -320,6 +325,7 @@ public class TextController : MonoBehaviour
     {
         if (TurtTextCnt == 1)
         {
+            spacebar.SetActive(true);
             textBox.SetActive(true);
             TTExt1.SetActive(true);
             if (Input.GetKeyDown(KeyCode.Space))
@@ -379,6 +385,7 @@ public class TextController : MonoBehaviour
                 Destroy(fakeTur);
                 Hud.unlockingTurtle = true;
                 petSwap.cutScene = false;
+                spacebar.SetActive(false);
                 TurtTextCnt = -1;
                 unlock3 = false;
             }
@@ -391,6 +398,7 @@ public class TextController : MonoBehaviour
         textBox.SetActive(true);
         if (BirdTextCnt == 1)
         {
+            spacebar.SetActive(true);
             BText1.SetActive(true);
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -469,6 +477,7 @@ public class TextController : MonoBehaviour
                 Destroy(fakeBird);
                 Hud.unlockingBird = true;
                 petSwap.cutScene = false;
+                spacebar.SetActive(false);
                 BirdTextCnt = -1;
                 unlock4 = false;
                 yield return new WaitForSeconds(1);
