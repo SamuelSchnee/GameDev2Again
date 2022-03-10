@@ -22,7 +22,10 @@ public class EController : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if(other.gameObject.tag == "H1In" || other.gameObject.tag == "H1DI" || other.gameObject.tag == "H1DO" || other.gameObject.tag == "H1O")
+        if (other.gameObject.tag == "H1DO" || other.gameObject.tag == "H1O" || other.gameObject.tag == "H2O" || other.gameObject.tag == "H3O" || gameObject.tag == "H4O"){
+            EKey.SetActive(true);
+        }
+        if(other.gameObject.tag == "H1In" || other.gameObject.tag == "H1DI")
         {
             if(petSwap.dogActive == true)
             {
@@ -38,7 +41,7 @@ public class EController : MonoBehaviour
         {
             EKey.SetActive(true);
         }
-        if (other.gameObject.tag == "H2I" || other.gameObject.tag == "H2O" || other.gameObject.tag == "H3I" || other.gameObject.tag == "H3O" || gameObject.tag == "H4I" || gameObject.tag == "H4O" || other.gameObject.tag == "startDoorOut" || other.gameObject.tag == "StartDoorIn")
+        if (other.gameObject.tag == "H2I"  || other.gameObject.tag == "H3I"  || gameObject.tag == "H4I"  || other.gameObject.tag == "startDoorOut" || other.gameObject.tag == "StartDoorIn")
         {
             if (petSwap.dogActive == true)
             {

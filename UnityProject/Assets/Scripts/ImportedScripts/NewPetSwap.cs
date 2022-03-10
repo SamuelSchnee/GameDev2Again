@@ -274,55 +274,37 @@ public class NewPetSwap : MonoBehaviour
         }
         if (other.gameObject.tag == "rope1" && Input.GetKeyDown(KeyCode.E) && hamsterActive == true)
         {
-            EKey.SetActive(false);
             Debug.Log("cutting Rope1");
-            platCnt.plat1Grav = true;
-            Destroy(rope1);
-            Destroy(rope12);
+            StartCoroutine(Rope1Cut());
         }
         if (other.gameObject.tag == "rope2" && Input.GetKeyDown(KeyCode.E) && hamsterActive == true)
         {
-            EKey.SetActive(false);
-            platCnt.plat2Grav = true;
-            Destroy(rope2);
-            Destroy(rope22);
+            StartCoroutine(Rope2Cut());
         }
         if (other.gameObject.tag == "rope3" && Input.GetKeyDown(KeyCode.E) && hamsterActive == true)
         {
-            EKey.SetActive(false);
-            platCnt.plat3Grav = true;
-            Destroy(rope3);
-            Destroy(rope32);
+            StartCoroutine(Rope3Cut());
         }
         if (other.gameObject.tag == "rope4" && Input.GetKeyDown(KeyCode.E) && hamsterActive == true)
         {
-            EKey.SetActive(false);
-            platCnt.plat4Grav = true;
-            Destroy(rope4);
-            Destroy(rope42);
+            StartCoroutine(Rope4Cut());
         }
         if (other.gameObject.tag == "rope5" && Input.GetKeyDown(KeyCode.E) && hamsterActive == true)
         {
-            EKey.SetActive(false);
-            platCnt.birdGrav = true;
-            Destroy(rope5);
-            Destroy(rope52);
+            StartCoroutine(Rope5Cut());
         }
         if (other.gameObject.tag == "rope6" && Input.GetKeyDown(KeyCode.E) && hamsterActive == true)
         {
-            EKey.SetActive(false);
-            platCnt.plat5Grav = true;
-            Destroy(rope6);
-            Destroy(rope62);
+            StartCoroutine(Rope6Cut());
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && dogActive == true)
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            if (other.gameObject.tag == "H1In")
+            if (other.gameObject.tag == "H1In" && dogActive == true)
             {
                 tele.house1I = true;
             }
-            if (other.gameObject.tag =="H1DI")
+            if (other.gameObject.tag =="H1DI" && dogActive == true)
             {
                 tele.house1DI = true;
             }
@@ -334,7 +316,7 @@ public class NewPetSwap : MonoBehaviour
             {
                 tele.house1O = true;
             }
-            if (other.gameObject.tag == "H2I")
+            if (other.gameObject.tag == "H2I" && dogActive == true)
             {
                 tele.house2I = true;
             }
@@ -342,7 +324,7 @@ public class NewPetSwap : MonoBehaviour
             {
                 tele.house2O = true;
             }
-            if (other.gameObject.tag == "H3I")
+            if (other.gameObject.tag == "H3I" && dogActive == true)
             {
                 tele.house3I = true;
             }
@@ -350,7 +332,7 @@ public class NewPetSwap : MonoBehaviour
             {
                 tele.house3O = true;
             }
-            if (other.gameObject.tag == "H4I")
+            if (other.gameObject.tag == "H4I" && dogActive == true)
             {
                 tele.house4I = true;
             }
@@ -362,11 +344,11 @@ public class NewPetSwap : MonoBehaviour
             {
                 tele.finalDoor = true;
             }
-            if (other.gameObject.tag == "StartDoorIn")
+            if (other.gameObject.tag == "StartDoorIn" && dogActive == true)
             {
                 tele.startDoorIn = true;
             }
-            if (other.gameObject.tag == "startDoorOut")
+            if (other.gameObject.tag == "startDoorOut" && dogActive == true)
             {
                 tele.startDoorOut = true;
             }
@@ -515,5 +497,48 @@ public class NewPetSwap : MonoBehaviour
         {
             playerRB.gravityScale = 2;
         }
+    }
+
+    IEnumerator Rope1Cut(){
+         platCnt.plat1Grav = true;
+         Destroy(rope1);
+         Destroy(rope12);
+        yield return new WaitForSeconds(.25f);
+        EKey.SetActive(false);
+    }
+    IEnumerator Rope2Cut(){
+        platCnt.plat2Grav = true;
+        Destroy(rope2);
+        Destroy(rope22);
+        yield return new WaitForSeconds(.25f);
+        EKey.SetActive(false);
+    }
+    IEnumerator Rope3Cut(){
+        platCnt.plat3Grav = true;
+        Destroy(rope3);
+        Destroy(rope32);
+        yield return new WaitForSeconds(.25f);
+        EKey.SetActive(false);
+    }
+    IEnumerator Rope4Cut(){
+        platCnt.plat4Grav = true;
+        Destroy(rope4);
+        Destroy(rope42);
+        yield return new WaitForSeconds(.25f);
+        EKey.SetActive(false);
+    }
+    IEnumerator Rope5Cut(){
+        platCnt.birdGrav = true;
+        Destroy(rope5);
+        Destroy(rope52);
+        yield return new WaitForSeconds(.25f);
+        EKey.SetActive(false);
+    }
+    IEnumerator Rope6Cut(){
+        platCnt.plat5Grav = true;
+        Destroy(rope6);
+        Destroy(rope62);
+        yield return new WaitForSeconds(.25f);
+        EKey.SetActive(false);
     }
 }
