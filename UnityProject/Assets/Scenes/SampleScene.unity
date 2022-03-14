@@ -691,7 +691,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: -2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -6118,7 +6118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petSwap: {fileID: 1575486455}
-  tele: {fileID: 0}
+  tele: {fileID: 1078171696}
   dogHUD: {fileID: 1342729797}
   hamHUD: {fileID: 1655117255}
   lizHUD: {fileID: 1791385059}
@@ -8867,7 +8867,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 6ca0cc5617e841c4c98ebfbb54d9f499, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9154,7 +9154,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: -2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -11010,7 +11010,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: -2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -14584,11 +14584,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3417924763833731808, guid: f9ef4b173c6949a45947bffe4cb3e027, type: 3}
       propertyPath: m_Size.y
-      value: 2.060297
+      value: 2.0499017
       objectReference: {fileID: 0}
     - target: {fileID: 3417924763833731808, guid: f9ef4b173c6949a45947bffe4cb3e027, type: 3}
       propertyPath: m_Offset.y
-      value: -0.46985152
+      value: -0.47504917
       objectReference: {fileID: 0}
     - target: {fileID: 3417924763833731808, guid: f9ef4b173c6949a45947bffe4cb3e027, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -17074,7 +17074,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 6ca0cc5617e841c4c98ebfbb54d9f499, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -17271,6 +17271,10 @@ PrefabInstance:
     - target: {fileID: 975223194204602606, guid: 690bff6593963f04ab92692c867f50d6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1256924067243006718, guid: 690bff6593963f04ab92692c867f50d6, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 690bff6593963f04ab92692c867f50d6, type: 3}
@@ -22839,7 +22843,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 6ca0cc5617e841c4c98ebfbb54d9f499, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -23413,7 +23417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1256924067243006718, guid: 690bff6593963f04ab92692c867f50d6, type: 3}
       propertyPath: m_SortingOrder
-      value: 11
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5902692506678278060, guid: 690bff6593963f04ab92692c867f50d6, type: 3}
@@ -26110,7 +26114,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: -2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -28750,7 +28754,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1256924067243006718, guid: 690bff6593963f04ab92692c867f50d6, type: 3}
       propertyPath: m_SortingOrder
-      value: 11
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5902692506678278060, guid: 690bff6593963f04ab92692c867f50d6, type: 3}
