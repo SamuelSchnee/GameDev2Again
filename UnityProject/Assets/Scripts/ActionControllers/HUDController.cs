@@ -6,7 +6,6 @@ using TMPro;
 public class HUDController : MonoBehaviour
 {
     public NewPetSwap petSwap;
-
     public TextMeshProUGUI animalUnlockText;
     public TextMeshProUGUI animalAbilityText;
 

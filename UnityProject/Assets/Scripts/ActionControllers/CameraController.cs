@@ -8,12 +8,17 @@ public class CameraController : MonoBehaviour
     public bool loadingStageBreak = false;
     public TeleporterScript tele;
     public NewPetSwap petswap;
+    public CutsceneController cutscene;
 
     public float loadTime;
 
     public GameObject blackScreen;
 
     public bool followingPlayer = true;
+    public bool cameraCutscene;
+
+    public GameObject cutscene1;
+    public GameObject cutscene2;
 
     // Start is called before the first frame update
     void Start()
@@ -24,11 +29,19 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (followingPlayer == true)
+        if (cameraCutscene == true && cutscene.cutsceneCount == 0)
+        {
+            transform.position = new Vector3(cutscene1.transform.position.x, cutscene1.transform.position.y, -60);
+        }
+        if (cameraCutscene == true && cutscene.cutsceneCount == 1)
+        {
+            transform.position = new Vector3(cutscene2.transform.position.x, cutscene2.transform.position.y, -60);
+        }
+        if (followingPlayer == true && cameraCutscene == false)
         {
             transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 2, -60);
         }
-        if (followingPlayer == false)
+        if (followingPlayer == false && cameraCutscene == false)
         {
             transform.position = new Vector3(transform.position.x, player.transform.position.y + 2, -60);
         }
@@ -50,6 +63,10 @@ public class CameraController : MonoBehaviour
         {
             loadingStageBreak = false;
             
+        }
+        if(tele.finalText == true)
+        {
+            blackScreen.SetActive(true);
         }
     }
     IEnumerator houseBreakCutscene()

@@ -7,6 +7,7 @@ public class LizardController1 : MonoBehaviour
     public GameObject lizardStorage;
     public GameObject player;
     public NewPetSwap petSwap;
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,8 @@ public class LizardController1 : MonoBehaviour
     void Update()
     {
         float horizontalInput = petSwap.horizontalInput;
+
+        animator.SetFloat("Speed", Mathf.Abs(horizontalInput));
 
         if (horizontalInput < 0)
         {

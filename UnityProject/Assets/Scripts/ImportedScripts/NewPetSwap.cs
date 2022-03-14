@@ -388,7 +388,6 @@ public class NewPetSwap : MonoBehaviour
     {
         if (collision.gameObject.tag == "ground")
         {
-            GameAudio.PlayOneShot(jumpLand, .06f);
             if (dogActive == true || hamsterActive == true)
             {
                 jumpCount = 1;
@@ -488,7 +487,7 @@ public class NewPetSwap : MonoBehaviour
         Destroy(rope1);
         Destroy(rope12);
         yield return new WaitForSeconds(.25f);
-        GameAudio.PlayOneShot(platformLand, 1);
+        GameAudio.PlayOneShot(platformLand, .5f);
         yield return new WaitForSeconds(.2f);
         EKey.SetActive(false);
     }
@@ -497,7 +496,7 @@ public class NewPetSwap : MonoBehaviour
         Destroy(rope2);
         Destroy(rope22);
         yield return new WaitForSeconds(.25f);
-        GameAudio.PlayOneShot(platformLand, 1);
+        GameAudio.PlayOneShot(platformLand, .5f);
         yield return new WaitForSeconds(.25f);
         EKey.SetActive(false);
     }
@@ -506,7 +505,7 @@ public class NewPetSwap : MonoBehaviour
         Destroy(rope3);
         Destroy(rope32);
         yield return new WaitForSeconds(.25f);
-        GameAudio.PlayOneShot(platformLand, 1);
+        GameAudio.PlayOneShot(platformLand, .5f);
         yield return new WaitForSeconds(.25f);
         EKey.SetActive(false);
     }
@@ -515,7 +514,7 @@ public class NewPetSwap : MonoBehaviour
         Destroy(rope4);
         Destroy(rope42);
         yield return new WaitForSeconds(.25f);
-        GameAudio.PlayOneShot(platformLand, 1);
+        GameAudio.PlayOneShot(platformLand, .5f);
         yield return new WaitForSeconds(.25f);
         EKey.SetActive(false);
     }
@@ -531,7 +530,7 @@ public class NewPetSwap : MonoBehaviour
         Destroy(rope6);
         Destroy(rope62);
         yield return new WaitForSeconds(.25f);
-        GameAudio.PlayOneShot(platformLand, 1);
+        GameAudio.PlayOneShot(platformLand, .5f);
         yield return new WaitForSeconds(.25f);
         EKey.SetActive(false);
     }

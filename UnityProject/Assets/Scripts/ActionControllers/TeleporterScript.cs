@@ -26,6 +26,8 @@ public class TeleporterScript : MonoBehaviour
     public bool finalDoor = false;
     public bool startDoorIn = false;
     public bool startDoorOut = false;
+    public bool finalText = false;
+    public bool finished = false;
 
     public GameObject player;
     public GameObject HouseIn1;
@@ -153,7 +155,7 @@ public class TeleporterScript : MonoBehaviour
         }
         if (finalDoor == true)
         {
-            SceneManager.LoadScene("WinScene");
+            finalText = true;
         }
         if (startDoorOut == true)
         {
@@ -164,6 +166,10 @@ public class TeleporterScript : MonoBehaviour
         {
             player.transform.position = SDI.transform.position;
             startDoorIn = false;
+        }
+        if(finished == true)
+        {
+            SceneManager.LoadScene("WinScene");
         }
     }
 
