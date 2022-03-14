@@ -4263,7 +4263,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petSwap: {fileID: 1575486455}
-  tele: {fileID: 0}
   animalUnlockText: {fileID: 1278681948}
   animalAbilityText: {fileID: 1223828404}
   unlockingHamster: 0
@@ -6119,6 +6118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petSwap: {fileID: 1575486455}
+  tele: {fileID: 0}
   dogHUD: {fileID: 1342729797}
   hamHUD: {fileID: 1655117255}
   lizHUD: {fileID: 1791385059}
@@ -20279,7 +20279,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1331856503}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -56.68, y: 358.2, z: 30806.3}
+  m_LocalPosition: {x: -56.43, y: 358.2, z: 30806.3}
   m_LocalScale: {x: 40.849525, y: 14.758703, z: 1}
   m_Children: []
   m_Father: {fileID: 1731657895}
@@ -23564,7 +23564,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1575486454}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 518, y: 350, z: -53.115524}
+  m_LocalPosition: {x: 105.64, y: 325.5, z: -53.115524}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 422042614}
@@ -23693,7 +23693,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: dd3a9bf23f1906c41820c9956b72b01f, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
