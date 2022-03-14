@@ -7,6 +7,8 @@ public class dogController : MonoBehaviour
     public NewPetSwap petSwap;
     public GameObject dogStorage;
     public GameObject player;
+    public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +18,10 @@ public class dogController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         float horizontalInput = petSwap.horizontalInput;
+
+        animator.SetFloat("Speed", Mathf.Abs(horizontalInput));
 
         if (horizontalInput < 0)
         {

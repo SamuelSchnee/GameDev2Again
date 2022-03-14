@@ -14,6 +14,13 @@ public class NewPetSwap : MonoBehaviour
     private Rigidbody2D playerRB;
     private BoxCollider2D playerBC;
     private Transform playerTFM;
+    private AudioSource GameAudio;
+
+    public AudioClip platformLand;
+    public AudioClip jumpLand;
+    public AudioClip doorOpen;
+    public AudioClip walking;
+
 
     public GameObject waterWall1;
     public GameObject waterWall2;
@@ -71,37 +78,15 @@ public class NewPetSwap : MonoBehaviour
         playerRB = GetComponent<Rigidbody2D>();
         canSwitch = true;
         playerBC = GetComponent<BoxCollider2D>();
+        GameAudio = GetComponent<AudioSource>();
     }
-
-    /*private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(this.gameObject);
-        }
-        else if (instance != this)
-        {
-            Destroy(this.gameObject);
-        }
-    }*/
-
-    // Update is called once per frame
     void Update()
     {
-        //DontDestroyOnLoad(this.gameObject);
 
         if (waiting == true)
         {
             delayCounter += 1;
         }
-
-       /* if (delayCounter >= 200)
-        {
-            cameraCnt.loadingStageBreak = true;
-            waiting = false;
-            delayCounter = 0;
-        }*/
 
         if (climbingWall == true)
         {
@@ -222,15 +207,6 @@ public class NewPetSwap : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "gem")
-        {
-            gemCount += 1;
-            Destroy(other.gameObject);
-        }
-    }
-
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.tag == "lizardUnlock" && Input.GetKeyDown(KeyCode.E))
@@ -302,10 +278,12 @@ public class NewPetSwap : MonoBehaviour
         {
             if (other.gameObject.tag == "H1In" && dogActive == true)
             {
+                GameAudio.PlayOneShot(doorOpen, .2f);
                 tele.house1I = true;
             }
             if (other.gameObject.tag =="H1DI" && dogActive == true)
             {
+                GameAudio.PlayOneShot(doorOpen, .2f);
                 tele.house1DI = true;
             }
             if (other.gameObject.tag == "H1DO")
@@ -318,6 +296,7 @@ public class NewPetSwap : MonoBehaviour
             }
             if (other.gameObject.tag == "H2I" && dogActive == true)
             {
+                GameAudio.PlayOneShot(doorOpen, .2f);
                 tele.house2I = true;
             }
             if (other.gameObject.tag == "H2O")
@@ -326,6 +305,7 @@ public class NewPetSwap : MonoBehaviour
             }
             if (other.gameObject.tag == "H3I" && dogActive == true)
             {
+                GameAudio.PlayOneShot(doorOpen, .2f);
                 tele.house3I = true;
             }
             if (other.gameObject.tag == "H3O")
@@ -334,6 +314,7 @@ public class NewPetSwap : MonoBehaviour
             }
             if (other.gameObject.tag == "H4I" && dogActive == true)
             {
+                GameAudio.PlayOneShot(doorOpen, .2f);
                 tele.house4I = true;
             }
             if (other.gameObject.tag == "H4O")
@@ -346,10 +327,12 @@ public class NewPetSwap : MonoBehaviour
             }
             if (other.gameObject.tag == "StartDoorIn" && dogActive == true)
             {
+                GameAudio.PlayOneShot(doorOpen, .2f);
                 tele.startDoorIn = true;
             }
             if (other.gameObject.tag == "startDoorOut" && dogActive == true)
             {
+                GameAudio.PlayOneShot(doorOpen, .2f);
                 tele.startDoorOut = true;
             }
         }
@@ -405,6 +388,7 @@ public class NewPetSwap : MonoBehaviour
     {
         if (collision.gameObject.tag == "ground")
         {
+            GameAudio.PlayOneShot(jumpLand, .06f);
             if (dogActive == true || hamsterActive == true)
             {
                 jumpCount = 1;
@@ -500,16 +484,20 @@ public class NewPetSwap : MonoBehaviour
     }
 
     IEnumerator Rope1Cut(){
-         platCnt.plat1Grav = true;
-         Destroy(rope1);
-         Destroy(rope12);
+        platCnt.plat1Grav = true;
+        Destroy(rope1);
+        Destroy(rope12);
         yield return new WaitForSeconds(.25f);
+        GameAudio.PlayOneShot(platformLand, 1);
+        yield return new WaitForSeconds(.2f);
         EKey.SetActive(false);
     }
     IEnumerator Rope2Cut(){
         platCnt.plat2Grav = true;
         Destroy(rope2);
         Destroy(rope22);
+        yield return new WaitForSeconds(.25f);
+        GameAudio.PlayOneShot(platformLand, 1);
         yield return new WaitForSeconds(.25f);
         EKey.SetActive(false);
     }
@@ -518,12 +506,16 @@ public class NewPetSwap : MonoBehaviour
         Destroy(rope3);
         Destroy(rope32);
         yield return new WaitForSeconds(.25f);
+        GameAudio.PlayOneShot(platformLand, 1);
+        yield return new WaitForSeconds(.25f);
         EKey.SetActive(false);
     }
     IEnumerator Rope4Cut(){
         platCnt.plat4Grav = true;
         Destroy(rope4);
         Destroy(rope42);
+        yield return new WaitForSeconds(.25f);
+        GameAudio.PlayOneShot(platformLand, 1);
         yield return new WaitForSeconds(.25f);
         EKey.SetActive(false);
     }
@@ -538,6 +530,8 @@ public class NewPetSwap : MonoBehaviour
         platCnt.plat5Grav = true;
         Destroy(rope6);
         Destroy(rope62);
+        yield return new WaitForSeconds(.25f);
+        GameAudio.PlayOneShot(platformLand, 1);
         yield return new WaitForSeconds(.25f);
         EKey.SetActive(false);
     }
